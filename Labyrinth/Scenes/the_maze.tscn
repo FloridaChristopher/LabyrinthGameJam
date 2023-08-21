@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dg8c44j4mjfkl"]
+[gd_scene load_steps=12 format=3 uid="uid://bfe3h1h50o15k"]
 
-[ext_resource type="Script" path="res://Scenes/maze_control.gd" id="1_2id27"]
+[ext_resource type="Script" path="res://Scripts/maze_control.gd" id="1_amh2u"]
 [ext_resource type="PackedScene" uid="uid://d0shy0fqdpckf" path="res://Scenes/player.tscn" id="1_opeje"]
-[ext_resource type="PackedScene" uid="uid://ucshykjuioa1" path="res://Rooms/room0.tscn" id="2_8btyh"]
+[ext_resource type="PackedScene" path="res://Rooms/room0.tscn" id="2_8btyh"]
 [ext_resource type="PackedScene" uid="uid://b44xpwublo52q" path="res://Rooms/room1.tscn" id="3_icjtw"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
+[ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
 [ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]
@@ -23,7 +24,7 @@ fog_enabled = true
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l8do5"]
 
 [node name="Labyrith" type="Node3D" groups=["Control"]]
-script = ExtResource("1_2id27")
+script = ExtResource("1_amh2u")
 rooms = Array[Resource]([ExtResource("2_8btyh"), ExtResource("3_icjtw")])
 
 [node name="Player" parent="." instance=ExtResource("1_opeje")]
@@ -64,7 +65,7 @@ offset_top = 21.0
 offset_right = 307.0
 offset_bottom = 122.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" groups=["UI"]]
 offset_left = 32.0
 offset_top = 29.0
 offset_right = 300.0
@@ -73,3 +74,4 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_u1q61")
 theme_override_font_sizes/normal_font_size = 45
 text = "Keys  99"
+script = ExtResource("7_n5gk5")

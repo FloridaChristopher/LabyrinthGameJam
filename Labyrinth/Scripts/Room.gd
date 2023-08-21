@@ -26,6 +26,7 @@ func place_player(door:int):
 	for dord in doors:
 		if dord.exit == door:
 			player.global_position = dord.spawnpoint.global_position
+			player.origionalpos = dord.spawnpoint.global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

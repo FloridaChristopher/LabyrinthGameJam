@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ucshykjuioa1"]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_h4cj0"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_0m50l"]
@@ -6,6 +6,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ds6qyo41p0yqr" path="res://Models/arch.obj" id="4_ye42f"]
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_nyqn0"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_fh0vx"]
+[ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="7_ulg30"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_is5n7"]
 size = Vector3(1, 0.3, 1)
@@ -132,5 +133,8 @@ mesh = SubResource("BoxMesh_is5n7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("BoxShape3D_y0qjd")
+
+[node name="BigKey" parent="." instance=ExtResource("7_ulg30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4238, 0.22328, -4.83122)
 
 [editable path="Te4t_platform10"]

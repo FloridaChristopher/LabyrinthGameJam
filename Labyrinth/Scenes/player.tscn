@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0shy0fqdpckf"]
+[gd_scene load_steps=11 format=3 uid="uid://d0shy0fqdpckf"]
 
 [ext_resource type="Script" path="res://Scripts/playerphys.gd" id="1_77lhv"]
 [ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
@@ -20,7 +20,21 @@ height = 0.451
 radius = 0.2
 height = 0.5
 
-[node name="Player" type="RigidBody3D" node_paths=PackedStringArray("grnd_ray", "jmpbuffertimer") groups=["Player"]]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxnhu"]
+transparency = 1
+albedo_color = Color(0.478431, 0.478431, 0.478431, 0.345098)
+
+[sub_resource type="SphereMesh" id="SphereMesh_wprkd"]
+material = SubResource("StandardMaterial3D_wxnhu")
+radius = 0.076
+height = 0.164
+radial_segments = 5
+rings = 2
+
+[sub_resource type="Gradient" id="Gradient_un6mf"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Player" type="RigidBody3D" node_paths=PackedStringArray("grnd_ray", "jmpbuffertimer", "coyoteTimer") groups=["Player"]]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -29,8 +43,10 @@ continuous_cd = true
 can_sleep = false
 script = ExtResource("1_77lhv")
 walkAcceleration = 10.0
+dragForce = 5.0
 grnd_ray = NodePath("RayCast3D")
-jmpbuffertimer = NodePath("CoyoteTime")
+jmpbuffertimer = NodePath("InputBuffer")
+coyoteTimer = NodePath("CoyoteTime")
 
 [node name="Model" type="Node3D" parent="." node_paths=PackedStringArray("thing")]
 script = ExtResource("2_8yywu")
@@ -47,7 +63,7 @@ shape = SubResource("CapsuleShape3D_rh6gj")
 target_position = Vector3(0, -0.4, 0)
 
 [node name="CoyoteTime" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 0.2
 one_shot = true
 
 [node name="PlayerResetter" type="Area3D" parent="." node_paths=PackedStringArray("thing")]
@@ -57,4 +73,18 @@ thing = NodePath("..")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PlayerResetter"]
 shape = SubResource("CapsuleShape3D_rh6gj")
 
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.263727, 0)
+randomness = 0.06
+mesh = SubResource("SphereMesh_wprkd")
+gravity = Vector3(0, 1, 0)
+damping_max = 0.2
+scale_amount_max = 2.43
+color_ramp = SubResource("Gradient_un6mf")
+
+[node name="InputBuffer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="CoyoteTime" to="." method="_on_coyote_time_timeout"]
 [connection signal="body_entered" from="PlayerResetter" to="PlayerResetter" method="_on_body_entered"]

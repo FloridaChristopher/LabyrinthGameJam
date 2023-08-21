@@ -1,9 +1,11 @@
+AnimationTree
 Node3D
+AnimationPlayer
+CollisionShape3D
+Area3D
+Timer
+CPUParticles3D
 ColorRect
 RichTextLabel
 CanvasLayer
 MeshInstance3D
-AnimationTree
-CollisionShape3D
-Area3D
-AnimationPlayer
