@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=7 format=3 uid="uid://d0shy0fqdpckf"]
 
 [ext_resource type="Script" path="res://Scripts/playerphys.gd" id="1_77lhv"]
 [ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
@@ -29,7 +29,7 @@ script = ExtResource("2_8yywu")
 thing = NodePath("..")
 
 [node name="golem" parent="Model" instance=ExtResource("4_pvlij")]
-transform = Transform3D(0.367127, 0, 0, 0, 0.367127, 0, 0, 0, 0.367127, 0.00824235, -0.247834, 0.0303608)
+transform = Transform3D(1.74715, 0, 0, 0, 1.74715, 0, 0, 0, 1.74715, 0, -0.239027, 0.0324754)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rh6gj")
