@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1hkfpy14snh4"]
+
+[ext_resource type="Script" path="res://playerphys.gd" id="1_77lhv"]
+[ext_resource type="Script" path="res://animator.gd" id="2_8yywu"]
+[ext_resource type="Script" path="res://playerresetter.gd" id="3_memyy"]
+[ext_resource type="PackedScene" uid="uid://calbfueornm78" path="res://golem.fbx" id="4_pvlij"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gkm5f"]
+friction = 0.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rh6gj"]
+radius = 0.2
+height = 0.5
+
+[node name="Player" type="RigidBody3D" node_paths=PackedStringArray("grnd_ray", "jmpbuffertimer") groups=["Player"]]
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_gkm5f")
+continuous_cd = true
+can_sleep = false
+script = ExtResource("1_77lhv")
+walkAcceleration = 10.0
+grnd_ray = NodePath("RayCast3D")
+jmpbuffertimer = NodePath("CoyoteTime")
+
+[node name="Model" type="Node3D" parent="." node_paths=PackedStringArray("thing")]
+script = ExtResource("2_8yywu")
+thing = NodePath("..")
+
+[node name="golem" parent="Model" instance=ExtResource("4_pvlij")]
+transform = Transform3D(0.367127, 0, 0, 0, 0.367127, 0, 0, 0, 0.367127, 0.00824235, -0.247834, 0.0303608)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_rh6gj")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -0.4, 0)
+
+[node name="CoyoteTime" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="PlayerResetter" type="Area3D" parent="." node_paths=PackedStringArray("thing")]
+script = ExtResource("3_memyy")
+thing = NodePath("..")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PlayerResetter"]
+shape = SubResource("CapsuleShape3D_rh6gj")
+
+[connection signal="body_entered" from="PlayerResetter" to="PlayerResetter" method="_on_body_entered"]

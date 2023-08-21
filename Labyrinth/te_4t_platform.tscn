@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvq5nphq3emrf"]
+
+[ext_resource type="Script" path="res://playerdist.gd" id="2_tm0kr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2hqrn"]
+size = Vector3(5, 0.3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q1iyi"]
+size = Vector3(5, 0.3, 3)
+
+[node name="Te4t_platform" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.612566, 0)
+shape = SubResource("BoxShape3D_2hqrn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_tm0kr")
