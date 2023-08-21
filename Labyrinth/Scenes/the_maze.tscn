@@ -1,13 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://chi5qrgyx7ppg"]
+[gd_scene load_steps=11 format=3 uid="uid://dg8c44j4mjfkl"]
 
+[ext_resource type="Script" path="res://Scenes/maze_control.gd" id="1_2id27"]
 [ext_resource type="PackedScene" uid="uid://d0shy0fqdpckf" path="res://Scenes/player.tscn" id="1_opeje"]
-[ext_resource type="Script" path="res://Scripts/Room.gd" id="2_awu64"]
-[ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Scenes/te_4t_platform.tscn" id="2_fjufi"]
+[ext_resource type="PackedScene" uid="uid://ucshykjuioa1" path="res://Rooms/room0.tscn" id="2_8btyh"]
+[ext_resource type="PackedScene" uid="uid://b44xpwublo52q" path="res://Rooms/room1.tscn" id="3_icjtw"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
-[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="5_ivfsp"]
-[ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="6_ldmqx"]
-[ext_resource type="ArrayMesh" uid="uid://ds6qyo41p0yqr" path="res://Models/arch.obj" id="6_vdd55"]
-[ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="7_l13ky"]
+[ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -22,15 +20,11 @@ background_color = Color(0.306631, 0.287546, 0.183839, 1)
 sky = SubResource("Sky_86w7s")
 fog_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_is5n7"]
-size = Vector3(1, 0.3, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_y0qjd"]
-size = Vector3(1, 0.3, 1)
-
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l8do5"]
 
-[node name="Labyrith" type="Node3D"]
+[node name="Labyrith" type="Node3D" groups=["Control"]]
+script = ExtResource("1_2id27")
+rooms = Array[Resource]([ExtResource("2_8btyh"), ExtResource("3_icjtw")])
 
 [node name="Player" parent="." instance=ExtResource("1_opeje")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207836, 0)
@@ -41,119 +35,6 @@ environment = SubResource("Environment_qwoqj")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.245764, 0.96933, 0, -0.96933, 0.245764, 0, 2.70768, -1.57183)
 shadow_enabled = true
-
-[node name="Room" type="Node3D" parent="."]
-script = ExtResource("2_awu64")
-
-[node name="Collum2" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -1.47612)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum3" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -1.47612)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum4" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -6.32155)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum5" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -6.32155)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum6" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -11.2065)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum7" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -11.2065)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum8" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -16.1952)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Collum9" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -16.1952)
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_ldmqx")
-skeleton = NodePath("../..")
-
-[node name="Arch" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.217341, 0, 0, 0, 0.155744, 0, 0, 0, 0.198733, 0.0650595, 2.93629, -1.46526)
-visible = false
-material_override = ExtResource("5_ivfsp")
-mesh = ExtResource("6_vdd55")
-skeleton = NodePath("../..")
-
-[node name="Doorway" parent="Room" instance=ExtResource("7_l13ky")]
-skeleton = NodePath("../..")
-
-[node name="Doorway2" parent="Room" instance=ExtResource("7_l13ky")]
-transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -7.64101)
-skeleton = NodePath("../..")
-exit = 1
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55773, 2.16938, -4.00025)
-
-[node name="Te4t_platform" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.177608)
-
-[node name="Te4t_platform6" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.44003, 0.125882, -2.65456)
-
-[node name="Te4t_platform7" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.80627, 0.610909, -3.56499)
-
-[node name="Te4t_platform8" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, 0.610909, -10.5939)
-
-[node name="Te4t_platform9" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, -0.398217, -13.4703)
-
-[node name="Te4t_platform4" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -8.71853)
-
-[node name="Te4t_platform5" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, -3.21068, 0.541584, -8.71853)
-
-[node name="Te4t_platform2" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
-
-[node name="Te4t_platform3" parent="Room" instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
-
-[node name="RigidBody3D" type="RigidBody3D" parent="Room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44998, 0, -4.80606)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-gravity_scale = 0.0
-angular_velocity = Vector3(0, 0.872665, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/RigidBody3D"]
-material_override = ExtResource("5_ivfsp")
-mesh = SubResource("BoxMesh_is5n7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/RigidBody3D"]
-shape = SubResource("BoxShape3D_y0qjd")
 
 [node name="player_tracker" type="Node3D" parent="." node_paths=PackedStringArray("trackedObj")]
 script = ExtResource("4_ors2s")
@@ -167,3 +48,28 @@ transform = Transform3D(1, 0, 0, 0, 0.740793, 0.671734, 0, -0.671734, 0.740793, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="killplane"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.88012, 0)
 shape = SubResource("WorldBoundaryShape3D_l8do5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 29.0
+offset_top = 30.0
+offset_right = 318.0
+offset_bottom = 131.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 307.0
+offset_bottom = 122.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 29.0
+offset_right = 300.0
+offset_bottom = 108.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("9_u1q61")
+theme_override_font_sizes/normal_font_size = 45
+text = "Keys  99"

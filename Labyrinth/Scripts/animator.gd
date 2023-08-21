@@ -12,4 +12,4 @@ func _process(delta):
 	if thing.XZ_velocity().length() > 0.2:
 		rotation = Vector3(0,-thing.XZ_velocity().angle() + deg_to_rad(90),0)
 	
-	animplayer.speed_scale = thing.XZ_velocity().length()
+	#animplayer.speed_scale = thing.XZ_velocity().length()

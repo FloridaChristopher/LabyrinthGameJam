@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d282skpo0ylnj"]
+
+[ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="1_ak4kc"]
+
+[resource]
+Label/fonts/font = ExtResource("1_ak4kc")
+RichTextLabel/fonts/normal_font = null
