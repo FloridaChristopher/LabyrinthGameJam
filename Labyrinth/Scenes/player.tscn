@@ -1,12 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0shy0fqdpckf"]
+[gd_scene load_steps=8 format=3 uid="uid://d0shy0fqdpckf"]
 
 [ext_resource type="Script" path="res://Scripts/playerphys.gd" id="1_77lhv"]
 [ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
 [ext_resource type="Script" path="res://Scripts/playerresetter.gd" id="3_memyy"]
-[ext_resource type="PackedScene" uid="uid://calbfueornm78" path="res://Models/golem.fbx" id="4_pvlij"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gkm5f"]
 friction = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i8tu"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hykjc"]
+material = SubResource("StandardMaterial3D_1i8tu")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.451
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rh6gj"]
 radius = 0.2
@@ -28,8 +36,9 @@ jmpbuffertimer = NodePath("CoyoteTime")
 script = ExtResource("2_8yywu")
 thing = NodePath("..")
 
-[node name="golem" parent="Model" instance=ExtResource("4_pvlij")]
-transform = Transform3D(1.74715, 0, 0, 0, 1.74715, 0, 0, 0, 1.74715, 0, -0.239027, 0.0324754)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0319881, 0)
+mesh = SubResource("CylinderMesh_hykjc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rh6gj")
