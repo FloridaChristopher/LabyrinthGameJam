@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1hkfpy14snh4"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://playerphys.gd" id="1_77lhv"]
-[ext_resource type="Script" path="res://animator.gd" id="2_8yywu"]
-[ext_resource type="Script" path="res://playerresetter.gd" id="3_memyy"]
-[ext_resource type="PackedScene" uid="uid://calbfueornm78" path="res://golem.fbx" id="4_pvlij"]
+[ext_resource type="Script" path="res://Scripts/playerphys.gd" id="1_77lhv"]
+[ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
+[ext_resource type="Script" path="res://Scripts/playerresetter.gd" id="3_memyy"]
+[ext_resource type="PackedScene" uid="uid://calbfueornm78" path="res://Models/golem.fbx" id="4_pvlij"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gkm5f"]
 friction = 0.0

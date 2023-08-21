@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dh7obwbk74cnc"]
+[gd_scene load_steps=11 format=3 uid="uid://q076p37hv0id"]
 
-[ext_resource type="Texture2D" uid="uid://bavj4prntcgwk" path="res://earthSkyboxPixelated.png" id="1_gn7cq"]
-[ext_resource type="PackedScene" uid="uid://b1hkfpy14snh4" path="res://player.tscn" id="1_opeje"]
-[ext_resource type="PackedScene" uid="uid://cvq5nphq3emrf" path="res://te_4t_platform.tscn" id="2_fjufi"]
-[ext_resource type="Script" path="res://camerascroll.gd" id="4_qwp05"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="1_opeje"]
+[ext_resource type="PackedScene" path="res://Scenes/te_4t_platform.tscn" id="2_fjufi"]
+[ext_resource type="Texture2D" uid="uid://bavj4prntcgwk" path="res://Textures/earthSkyboxPixelated.png" id="3_en5vt"]
+[ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ja45p"]
-panorama = ExtResource("1_gn7cq")
+panorama = ExtResource("3_en5vt")
 
 [sub_resource type="Sky" id="Sky_i6v5o"]
 sky_material = SubResource("PanoramaSkyMaterial_ja45p")
@@ -58,7 +58,7 @@ environment = SubResource("Environment_qwoqj")
 transform = Transform3D(0.996794, 0.00761001, 0.0796448, -0.0800076, 0.0948112, 0.992275, 0, -0.995466, 0.0951161, 0, 2.70768, -1.57183)
 
 [node name="player_tracker" type="Node3D" parent="." node_paths=PackedStringArray("trackedObj")]
-script = ExtResource("4_qwp05")
+script = ExtResource("4_ors2s")
 trackedObj = NodePath("../Player")
 
 [node name="Camera3D" type="Camera3D" parent="player_tracker"]

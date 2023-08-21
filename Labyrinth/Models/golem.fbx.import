@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://calbfueornm78"
-path="res://.godot/imported/golem.fbx-ea47965751650542db10a8b44beb4edd.scn"
+path="res://.godot/imported/golem.fbx-40acbbd5eb330b5de0c837eb2ca4982b.scn"
 
 [deps]
 
-source_file="res://golem.fbx"
-dest_files=["res://.godot/imported/golem.fbx-ea47965751650542db10a8b44beb4edd.scn"]
+source_file="res://Models/golem.fbx"
+dest_files=["res://.godot/imported/golem.fbx-40acbbd5eb330b5de0c837eb2ca4982b.scn"]
 
 [params]
 

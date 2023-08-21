@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bavj4prntcgwk"
-path.s3tc="res://.godot/imported/earthSkyboxPixelated.png-2612b1c268dbf51c2eed6dfbfe912324.s3tc.ctex"
+uid="uid://yfalr6rgwpud"
+path.s3tc="res://.godot/imported/golem-ea47965751650542db10a8b44beb4edd_golemtexture.png-04380a75c045ec1481117550048c4af5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://earthSkyboxPixelated.png"
-dest_files=["res://.godot/imported/earthSkyboxPixelated.png-2612b1c268dbf51c2eed6dfbfe912324.s3tc.ctex"]
+source_file="res://Textures/golem-ea47965751650542db10a8b44beb4edd_golemtexture.png"
+dest_files=["res://.godot/imported/golem-ea47965751650542db10a8b44beb4edd_golemtexture.png-04380a75c045ec1481117550048c4af5.s3tc.ctex"]
 
 [params]
 
