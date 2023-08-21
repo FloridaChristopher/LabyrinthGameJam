@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6scm53rj64q1"
+path="res://.godot/imported/collum.obj-83c9b954b0f4f26b9851c003a7fbcd0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/collum.obj-83c9b954b0f4f26b9851c003a7fbcd0c.mesh"]
+
+source_file="res://Models/collum.obj"
+dest_files=["res://.godot/imported/collum.obj-83c9b954b0f4f26b9851c003a7fbcd0c.mesh", "res://.godot/imported/collum.obj-83c9b954b0f4f26b9851c003a7fbcd0c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

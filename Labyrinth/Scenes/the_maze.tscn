@@ -1,21 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://q076p37hv0id"]
+[gd_scene load_steps=15 format=3 uid="uid://chi5qrgyx7ppg"]
 
 [ext_resource type="PackedScene" uid="uid://d0shy0fqdpckf" path="res://Scenes/player.tscn" id="1_opeje"]
-[ext_resource type="PackedScene" path="res://Scenes/te_4t_platform.tscn" id="2_fjufi"]
-[ext_resource type="Texture2D" uid="uid://bavj4prntcgwk" path="res://Textures/earthSkyboxPixelated.png" id="3_en5vt"]
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="2_awu64"]
+[ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Scenes/te_4t_platform.tscn" id="2_fjufi"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
+[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="5_ivfsp"]
+[ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="6_ldmqx"]
+[ext_resource type="ArrayMesh" uid="uid://ds6qyo41p0yqr" path="res://Models/arch.obj" id="6_vdd55"]
+[ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="7_l13ky"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ja45p"]
-panorama = ExtResource("3_en5vt")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]
+sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_i6v5o"]
-sky_material = SubResource("PanoramaSkyMaterial_ja45p")
+[sub_resource type="Sky" id="Sky_86w7s"]
+sky_material = SubResource("ProceduralSkyMaterial_snw16")
 
 [sub_resource type="Environment" id="Environment_qwoqj"]
 background_mode = 2
-sky = SubResource("Sky_i6v5o")
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l8do5"]
+background_color = Color(0.306631, 0.287546, 0.183839, 1)
+sky = SubResource("Sky_86w7s")
+fog_enabled = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_is5n7"]
 size = Vector3(1, 0.3, 1)
@@ -23,39 +28,132 @@ size = Vector3(1, 0.3, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_y0qjd"]
 size = Vector3(1, 0.3, 1)
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l8do5"]
+
 [node name="Labyrith" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_opeje")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207836, 0)
 
-[node name="Te4t_platform" parent="." instance=ExtResource("2_fjufi")]
-
-[node name="Te4t_platform6" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.44003, 0.125882, -2.65456)
-
-[node name="Te4t_platform7" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.80627, 0.610909, -3.56499)
-
-[node name="Te4t_platform4" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -2.45156, 4.02305, -4.37114e-08, -1.07161e-07, 1.88546, -0.816718, -8.71853)
-
-[node name="Te4t_platform5" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -2.45156, 4.02305, -4.37114e-08, -1.07161e-07, -3.21068, -0.816718, -8.71853)
-
-[node name="Te4t_platform2" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.64941)
-
-[node name="Te4t_platform8" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, 0.258819, -0.965926, 0, 0.965926, 0.258819, 0, 0.764227, -8.15257)
-
-[node name="Te4t_platform3" parent="." instance=ExtResource("2_fjufi")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qwoqj")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.996794, 0.00761001, 0.0796448, -0.0800076, 0.0948112, 0.992275, 0, -0.995466, 0.0951161, 0, 2.70768, -1.57183)
+transform = Transform3D(1, 0, 0, 0, 0.245764, 0.96933, 0, -0.96933, 0.245764, 0, 2.70768, -1.57183)
+shadow_enabled = true
+
+[node name="Room" type="Node3D" parent="."]
+script = ExtResource("2_awu64")
+
+[node name="Collum2" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -1.47612)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum3" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -1.47612)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum4" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -6.32155)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum5" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -6.32155)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum6" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -11.2065)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum7" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -11.2065)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum8" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -16.1952)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Collum9" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -16.1952)
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_ldmqx")
+skeleton = NodePath("../..")
+
+[node name="Arch" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(0.217341, 0, 0, 0, 0.155744, 0, 0, 0, 0.198733, 0.0650595, 2.93629, -1.46526)
+visible = false
+material_override = ExtResource("5_ivfsp")
+mesh = ExtResource("6_vdd55")
+skeleton = NodePath("../..")
+
+[node name="Doorway" parent="Room" instance=ExtResource("7_l13ky")]
+skeleton = NodePath("../..")
+
+[node name="Doorway2" parent="Room" instance=ExtResource("7_l13ky")]
+transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -7.64101)
+skeleton = NodePath("../..")
+exit = 1
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55773, 2.16938, -4.00025)
+
+[node name="Te4t_platform" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.177608)
+
+[node name="Te4t_platform6" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.44003, 0.125882, -2.65456)
+
+[node name="Te4t_platform7" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.80627, 0.610909, -3.56499)
+
+[node name="Te4t_platform8" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, 0.610909, -10.5939)
+
+[node name="Te4t_platform9" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, -0.398217, -13.4703)
+
+[node name="Te4t_platform4" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -8.71853)
+
+[node name="Te4t_platform5" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, -3.21068, 0.541584, -8.71853)
+
+[node name="Te4t_platform2" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
+
+[node name="Te4t_platform3" parent="Room" instance=ExtResource("2_fjufi")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44998, 0, -4.80606)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+angular_velocity = Vector3(0, 0.872665, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Room/RigidBody3D"]
+material_override = ExtResource("5_ivfsp")
+mesh = SubResource("BoxMesh_is5n7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/RigidBody3D"]
+shape = SubResource("BoxShape3D_y0qjd")
 
 [node name="player_tracker" type="Node3D" parent="." node_paths=PackedStringArray("trackedObj")]
 script = ExtResource("4_ors2s")
@@ -69,22 +167,3 @@ transform = Transform3D(1, 0, 0, 0, 0.740793, 0.671734, 0, -0.671734, 0.740793, 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="killplane"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.88012, 0)
 shape = SubResource("WorldBoundaryShape3D_l8do5")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55773, 2.16938, -4.00025)
-
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44998, 0, -4.80606)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-gravity_scale = 0.0
-angular_velocity = Vector3(0, 0.872665, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-mesh = SubResource("BoxMesh_is5n7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("BoxShape3D_y0qjd")

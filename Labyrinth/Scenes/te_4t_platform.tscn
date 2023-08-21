@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://832o6u5ts2pp"]
 
+[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="1_3te68"]
 [ext_resource type="Script" path="res://Scripts/playerdist.gd" id="2_tm0kr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2hqrn"]
 size = Vector3(5, 0.3, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_q1iyi"]
+material = ExtResource("1_3te68")
 size = Vector3(5, 0.3, 3)
 
 [node name="Te4t_platform" type="StaticBody3D"]
