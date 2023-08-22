@@ -1,0 +1,117 @@
+[gd_scene load_steps=12 format=3 uid="uid://ceed8awj3lsqn"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2pmd4ijsjnlq" path="res://Models/Big key.obj" id="1_jps3x"]
+[ext_resource type="Script" path="res://Scripts/key.gd" id="1_kah3o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5sd7"]
+albedo_color = Color(0.752941, 0.639216, 0.4, 1)
+metallic = 1.0
+roughness = 0.56
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fj8e8"]
+radius = 0.335
+
+[sub_resource type="Animation" id="Animation_0fnr4"]
+resource_name = "keyspin"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.0682135, 0), Vector3(0, 0.0136427, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -3.14159, 0), Vector3(0, -6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_q5mab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a3qgh"]
+_data = {
+"RESET": SubResource("Animation_q5mab"),
+"keyspin": SubResource("Animation_0fnr4")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_852qx"]
+animation = &"keyspin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xg8ni"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_1ap63"]
+states/keyspin/node = SubResource("AnimationNodeAnimation_852qx")
+states/keyspin/position = Vector2(311, 96)
+transitions = ["Start", "keyspin", SubResource("AnimationNodeStateMachineTransition_xg8ni")]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_0epxt"]
+
+[node name="BigKey" type="Area3D"]
+script = ExtResource("1_kah3o")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.56356, 0, 0.826075, 0, 1, 0, -0.826075, 0, -0.56356, 0, 0.0471061, 0)
+
+[node name="BigKey" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.37248, 0, 0, 0, 0.341718, 0.148222, 0, -0.148222, 0.341718, 0, 0.0314566, 0.111401)
+material_override = SubResource("StandardMaterial3D_y5sd7")
+mesh = ExtResource("1_jps3x")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.289194, 0)
+shape = SubResource("SphereShape3D_fj8e8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+libraries = {
+"": SubResource("AnimationLibrary_a3qgh")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_1ap63")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_0epxt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
