@@ -68,6 +68,7 @@ skeleton = NodePath("../..")
 
 [node name="Doorway" parent="." instance=ExtResource("5_nyqn0")]
 skeleton = NodePath("../..")
+connectedRoom = 2
 
 [node name="Doorway2" parent="." instance=ExtResource("5_nyqn0")]
 transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -7.64101)
