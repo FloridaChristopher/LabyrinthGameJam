@@ -9,6 +9,7 @@ class_name playerphys
 @export var grnd_ray: RayCast3D
 @export var jmpbuffertimer: Timer
 @export var coyoteTimer: Timer
+var origparent
 
 var origionalpos: Vector3
 var direction: Vector2 = Vector2.ZERO
@@ -19,6 +20,7 @@ var coyoteTime: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	origionalpos = global_position
+	origparent = get_parent()
 
 func _process(delta):
 	direction = read_input()
@@ -73,7 +75,7 @@ func _physics_process(delta):
 	if jump:
 		apply_impulse(Vector3(0,jumpForce,0))
 		pass
-
+		
 func XZ_velocity():
 	return Vector2(linear_velocity.x,linear_velocity.z)
 

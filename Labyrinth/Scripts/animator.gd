@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var thing: playerphys
+@export var thing: playerphys2
 @export var animplayer: AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.

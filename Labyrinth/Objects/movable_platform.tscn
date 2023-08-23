@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b111fk8cj70p8"]
+
+[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="1_jeg2w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_is5n7"]
+size = Vector3(1, 0.3, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sqdtp"]
+size = Vector3(1, 0.3, 1)
+
+[node name="Moving Platform" type="AnimatableBody3D" groups=["MovingPlatform"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44998, -0.352683, -4.80606)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_jeg2w")
+mesh = SubResource("BoxMesh_is5n7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_sqdtp")
+
+[node name="Node3D" type="Node3D" parent="."]

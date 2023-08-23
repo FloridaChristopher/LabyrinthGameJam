@@ -1,11 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0shy0fqdpckf"]
+[gd_scene load_steps=10 format=3 uid="uid://d0shy0fqdpckf"]
 
-[ext_resource type="Script" path="res://Scripts/playerphys.gd" id="1_77lhv"]
+[ext_resource type="Script" path="res://Scenes/playerphys2.gd" id="1_gstkc"]
 [ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
 [ext_resource type="Script" path="res://Scripts/playerresetter.gd" id="3_memyy"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gkm5f"]
-friction = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i8tu"]
 albedo_color = Color(1, 0, 0, 1)
@@ -34,19 +31,11 @@ rings = 2
 [sub_resource type="Gradient" id="Gradient_un6mf"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="Player" type="RigidBody3D" node_paths=PackedStringArray("grnd_ray", "jmpbuffertimer", "coyoteTimer") groups=["Player"]]
+[node name="Player" type="CharacterBody3D" groups=["Player"]]
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-physics_material_override = SubResource("PhysicsMaterial_gkm5f")
-continuous_cd = true
-can_sleep = false
-script = ExtResource("1_77lhv")
-walkAcceleration = 10.0
-dragForce = 5.0
-grnd_ray = NodePath("RayCast3D")
-jmpbuffertimer = NodePath("InputBuffer")
-coyoteTimer = NodePath("CoyoteTime")
+script = ExtResource("1_gstkc")
 
 [node name="Model" type="Node3D" parent="." node_paths=PackedStringArray("thing")]
 script = ExtResource("2_8yywu")
@@ -71,6 +60,7 @@ script = ExtResource("3_memyy")
 thing = NodePath("..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PlayerResetter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0352096, 0)
 shape = SubResource("CapsuleShape3D_rh6gj")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
@@ -86,5 +76,4 @@ color_ramp = SubResource("Gradient_un6mf")
 wait_time = 0.2
 one_shot = true
 
-[connection signal="timeout" from="CoyoteTime" to="." method="_on_coyote_time_timeout"]
 [connection signal="body_entered" from="PlayerResetter" to="PlayerResetter" method="_on_body_entered"]

@@ -1,7 +1,10 @@
-AnimationTree
+CharacterBody3D
+RigidBody3D
 Node3D
+AnimationTree
 AnimationPlayer
 CollisionShape3D
+AnimatableBody3D
 Area3D
 Timer
 CPUParticles3D
