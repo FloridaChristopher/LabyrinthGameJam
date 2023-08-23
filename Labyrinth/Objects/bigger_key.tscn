@@ -80,8 +80,9 @@ _data = {
 "keyspin": SubResource("Animation_0fnr4")
 }
 
-[node name="BigKey" type="Area3D"]
+[node name="BigKey" type="Area3D" groups=["Key"]]
 script = ExtResource("1_s7i48")
+isBiggerKey = true
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(-0.0829513, 0, -0.996553, 0, 1, 0, 0.996553, 0, -0.0829513, 0, 0.03591, 0)

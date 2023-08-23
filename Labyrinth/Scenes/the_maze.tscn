@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://buh8ief2eol35"]
+[gd_scene load_steps=14 format=3 uid="uid://buh8ief2eol35"]
 
 [ext_resource type="Script" path="res://Scripts/maze_control.gd" id="1_amh2u"]
 [ext_resource type="PackedScene" uid="uid://cuaux0000u4ex" path="res://Scenes/player.tscn" id="1_opeje"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b44xpwublo52q" path="res://Rooms/room1.tscn" id="3_icjtw"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
 [ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
+[ext_resource type="PackedScene" uid="uid://cdb6cv8ygoi3v" path="res://UI/bigger_key_icon.tscn" id="8_gstgy"]
 [ext_resource type="Script" path="res://Scripts/Debug2.gd" id="8_w72b8"]
 [ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
@@ -30,9 +31,9 @@ rooms = Array[Resource]([ExtResource("2_8btyh"), ExtResource("3_icjtw")])
 
 [node name="Player" parent="." instance=ExtResource("1_opeje")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207836, 0)
-accel_force = 5
 drag_force = 5
 jump_speed = 5
+fallgravity = 2
 speed_limit = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -61,34 +62,39 @@ shape = SubResource("WorldBoundaryShape3D_l8do5")
 offset_left = 29.0
 offset_top = 30.0
 offset_right = 318.0
-offset_bottom = 131.0
+offset_bottom = 168.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_left = 18.0
 offset_top = 21.0
 offset_right = 307.0
-offset_bottom = 122.0
+offset_bottom = 154.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" groups=["UI"]]
-offset_left = 32.0
-offset_top = 29.0
-offset_right = 300.0
-offset_bottom = 108.0
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("pos") groups=["UI"]]
+offset_left = 28.0
+offset_top = 23.0
+offset_right = 296.0
+offset_bottom = 102.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("9_u1q61")
 theme_override_font_sizes/normal_font_size = 45
 text = "Keys  99"
 script = ExtResource("7_n5gk5")
+pos = NodePath("../Node2D")
+bigkeyprefab = ExtResource("8_gstgy")
 
 [node name="Debug" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("player")]
-offset_left = 29.0
-offset_top = 147.0
-offset_right = 322.0
-offset_bottom = 274.0
+offset_left = 16.0
+offset_top = 183.0
+offset_right = 309.0
+offset_bottom = 310.0
 theme_override_colors/default_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 22
 text = "Debug:
 "
 script = ExtResource("8_w72b8")
 player = NodePath("../../Player")
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+position = Vector2(61, 108)

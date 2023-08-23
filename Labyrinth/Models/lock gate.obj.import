@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nn3onljle7bi"
+path="res://.godot/imported/lock gate.obj-5933e5a191021364eb85a41e28d614ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lock gate.obj-5933e5a191021364eb85a41e28d614ac.mesh"]
+
+source_file="res://Models/lock gate.obj"
+dest_files=["res://.godot/imported/lock gate.obj-5933e5a191021364eb85a41e28d614ac.mesh", "res://.godot/imported/lock gate.obj-5933e5a191021364eb85a41e28d614ac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -30,14 +30,18 @@ func _physics_process(delta):
 		velocity += Vector3(input2.x,0,input2.y) * delta * 10 * accel_force * acceleration_curve_value() #* XZ_velocity().angle_to(input2)
 	
 	if input2.length() < 0.01 and is_on_floor():
-		velocity += -velocity * delta * drag_force * velocity.length()
+		velocity += horz_to_vec3(-XZ_velocity() * delta * drag_force * XZ_velocity().length())
 	if input2.length() < 0.01:
-		velocity += -velocity * delta * air_drag_force
+		velocity += horz_to_vec3(-XZ_velocity() * delta * air_drag_force)
 	move_and_slide()
 	
 	if XZ_velocity().length() > speed_limit:
 		var newspeed = XZ_velocity().normalized() * speed_limit
 		velocity = Vector3(newspeed.x,velocity.y,newspeed.y)
+
+
+func horz_to_vec3(vec:Vector2):
+	return Vector3(vec.x,0,vec.y)
 
 
 func apply_gravity(delta):

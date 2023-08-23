@@ -1,18 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb061gs4qifx8"]
+[gd_scene load_steps=7 format=3 uid="uid://cb061gs4qifx8"]
 
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="1_whdr1"]
 [ext_resource type="ArrayMesh" uid="uid://dvknk6txtcfxh" path="res://Models/doorway.obj" id="2_3owyv"]
 [ext_resource type="Script" path="res://Scripts/warpdoor.gd" id="3_jj8vu"]
+[ext_resource type="ArrayMesh" uid="uid://nn3onljle7bi" path="res://Models/lock gate.obj" id="4_gwfgt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5k4op"]
 size = Vector3(1.269, 1.904, 0.439)
 
-[node name="Doorway" type="MeshInstance3D" node_paths=PackedStringArray("spawnpoint") groups=["DoorControl"]]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_km3br"]
+albedo_color = Color(0.752941, 0.639216, 0.4, 1)
+metallic = 1.0
+roughness = 0.56
+
+[node name="Doorway" type="MeshInstance3D" node_paths=PackedStringArray("spawnpoint", "gate") groups=["DoorControl"]]
 transform = Transform3D(-3.149e-08, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -3.149e-08, -2.41116, -0.462566, -0.0587712)
 material_override = ExtResource("1_whdr1")
 mesh = ExtResource("2_3owyv")
 script = ExtResource("3_jj8vu")
 spawnpoint = NodePath("Node3D")
+gate = NodePath("LockGate")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -22,5 +29,10 @@ shape = SubResource("BoxShape3D_5k4op")
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, -5.21541e-08, 0.368271, 1.19146)
+
+[node name="LockGate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, -0.0487188, 0.0351018, -0.0686426)
+material_override = SubResource("StandardMaterial3D_km3br")
+mesh = ExtResource("4_gwfgt")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

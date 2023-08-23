@@ -1,7 +1,8 @@
+Node2D
+Node3D
 RichTextLabel
 CharacterBody3D
 RigidBody3D
-Node3D
 AnimationTree
 AnimationPlayer
 CollisionShape3D
