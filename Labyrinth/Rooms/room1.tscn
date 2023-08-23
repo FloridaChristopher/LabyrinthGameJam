@@ -107,7 +107,8 @@ skeleton = NodePath("../..")
 
 [node name="Doorway" parent="." instance=ExtResource("5_5ui0a")]
 skeleton = NodePath("../..")
-exit = 1
+exit = 2
+connectedRoom = 2
 
 [node name="Doorway2" parent="." instance=ExtResource("5_5ui0a")]
 transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.48593, -0.462566, -7.64101)
