@@ -10,3 +10,7 @@ res://Scripts/Room.gd
 res://Rooms/room0.tscn
 res://Scripts/playerresetter.gd
 res://Scenes/Debug2.gd
+res://Scripts/key.gd
+res://Scripts/collectablecontrol.gd
+res://Objects/bigger_key.tscn
+res://Scripts/playerphys2.gd

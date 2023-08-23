@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b44xpwublo52q"]
+[gd_scene load_steps=12 format=3 uid="uid://b44xpwublo52q"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_mjtdb"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_m0yci"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_5ui0a"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_hh0lo"]
 [ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="7_88nv5"]
+[ext_resource type="PackedScene" uid="uid://rag02nht8chh" path="res://Objects/bigger_key.tscn" id="8_r3ebm"]
 
 [sub_resource type="Animation" id="Animation_rmhfo"]
 length = 0.001
@@ -160,5 +161,8 @@ autoplay = "room1-platform1"
 libraries = {
 "": SubResource("AnimationLibrary_jjd4k")
 }
+
+[node name="BigKey" parent="." instance=ExtResource("8_r3ebm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05679, -0.311547, 0.218281)
 
 [editable path="Te4t_platform10"]

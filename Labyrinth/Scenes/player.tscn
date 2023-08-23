@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0shy0fqdpckf"]
+[gd_scene load_steps=11 format=3 uid="uid://cuaux0000u4ex"]
 
-[ext_resource type="Script" path="res://Scenes/playerphys2.gd" id="1_gstkc"]
+[ext_resource type="Script" path="res://Scripts/playerphys2.gd" id="1_nlcty"]
 [ext_resource type="Script" path="res://Scripts/animator.gd" id="2_8yywu"]
 [ext_resource type="Script" path="res://Scripts/playerresetter.gd" id="3_memyy"]
 
 [sub_resource type="Curve" id="Curve_gd42e"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.536083, 0.990909), 0.0, -4.97968, 0, 0, Vector2(0.618557, 0.581818), -0.251948, -0.251948, 0, 0, Vector2(0.654639, 0.0545454), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.536083, 0.990909), 0.0, -4.97968, 0, 0, Vector2(0.56701, 0.327273), -0.251948, -0.251948, 0, 0, Vector2(0.654639, 0.0545454), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1i8tu"]
@@ -39,9 +39,10 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-script = ExtResource("1_gstkc")
+script = ExtResource("1_nlcty")
 accel_curve = SubResource("Curve_gd42e")
-accel_force = 10
+accel_force = 5
+speed_limit = 2
 
 [node name="Model" type="Node3D" parent="." node_paths=PackedStringArray("thing")]
 script = ExtResource("2_8yywu")
