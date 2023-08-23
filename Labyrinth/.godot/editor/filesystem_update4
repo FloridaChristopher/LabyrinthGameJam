@@ -14,3 +14,8 @@ res://Scripts/maze_control.gd
 res://Scripts/roomsdata.gd
 res://Scripts/Room.gd
 res://Scripts/key.gd
+res://Scripts/animator.gd
+res://Scripts/Debug2.gd
+res://Scripts/playerdist.gd
+res://Scripts/playerphys.gd
+res://Scripts/playerresetter.gd
