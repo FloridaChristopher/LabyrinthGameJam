@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfe3h1h50o15k"]
+[gd_scene load_steps=13 format=3 uid="uid://bfe3h1h50o15k"]
 
 [ext_resource type="Script" path="res://Scripts/maze_control.gd" id="1_amh2u"]
 [ext_resource type="PackedScene" uid="uid://d0shy0fqdpckf" path="res://Scenes/player.tscn" id="1_opeje"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b44xpwublo52q" path="res://Rooms/room1.tscn" id="3_icjtw"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
 [ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
+[ext_resource type="Script" path="res://Scenes/Debug2.gd" id="8_camxi"]
 [ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]
@@ -29,6 +30,10 @@ rooms = Array[Resource]([ExtResource("2_8btyh"), ExtResource("3_icjtw")])
 
 [node name="Player" parent="." instance=ExtResource("1_opeje")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207836, 0)
+accel_force = 5
+drag_force = 5
+jump_speed = 5
+speed_limit = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qwoqj")
@@ -75,3 +80,15 @@ theme_override_fonts/normal_font = ExtResource("9_u1q61")
 theme_override_font_sizes/normal_font_size = 45
 text = "Keys  99"
 script = ExtResource("7_n5gk5")
+
+[node name="Debug" type="RichTextLabel" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+offset_left = 29.0
+offset_top = 147.0
+offset_right = 322.0
+offset_bottom = 274.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 22
+text = "Debug:
+"
+script = ExtResource("8_camxi")
+player = NodePath("../../Player")

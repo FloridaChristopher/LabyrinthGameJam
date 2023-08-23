@@ -9,3 +9,4 @@ res://Objects/movable_platform.tscn
 res://Scripts/Room.gd
 res://Rooms/room0.tscn
 res://Scripts/playerresetter.gd
+res://Scenes/Debug2.gd

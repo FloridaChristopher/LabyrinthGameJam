@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brxx65eh0t5mh"]
+[gd_scene load_steps=8 format=3 uid="uid://brxx65eh0t5mh"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_h4cj0"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_0m50l"]
@@ -7,51 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_nyqn0"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_fh0vx"]
 [ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="7_ulg30"]
-[ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="8_5rbe0"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_is5n7"]
-size = Vector3(1, 0.3, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_y0qjd"]
-size = Vector3(1, 0.3, 1)
-
-[sub_resource type="Animation" id="Animation_rmhfo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Moving Platform:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.44998, -0.352683, -4.80606)]
-}
-
-[sub_resource type="Animation" id="Animation_vwe8t"]
-resource_name = "room1-platform1"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Moving Platform:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.8, 2.3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.44998, -0.352683, -4.80606), Vector3(-1.44998, -0.352683, -4.80606), Vector3(-0.312341, -0.352683, -2.48747), Vector3(-0.312341, -0.352683, -2.48747), Vector3(-1.44998, -0.352683, -4.80606)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jjd4k"]
-_data = {
-"RESET": SubResource("Animation_rmhfo"),
-"room1-platform1": SubResource("Animation_vwe8t")
-}
 
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_h4cj0")
@@ -133,10 +88,13 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 visible = false
 
 [node name="Te4t_platform6" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -5.08272, 0.125882, -2.65456)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -2.02519, 0.125882, -2.65456)
+
+[node name="Te4t_platform11" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(0.267172, 0, 0, 0, 0.524977, 0, 0, 0, 0.423047, -1.46216, 1.29028, -4.89441)
 
 [node name="Te4t_platform7" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.80627, 0.610909, -3.56499)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.10794, 0.610909, -3.56499)
 
 [node name="Te4t_platform8" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, 0.610909, -10.5939)
@@ -156,36 +114,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
 [node name="Te4t_platform3" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
 
-[node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93003, 0, -4.80606)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_z = true
-gravity_scale = 0.0
-angular_velocity = Vector3(0, 0.872665, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-material_override = ExtResource("2_0m50l")
-mesh = SubResource("BoxMesh_is5n7")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("BoxShape3D_y0qjd")
-
 [node name="BigKey" parent="." instance=ExtResource("7_ulg30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4238, 0.22328, -4.83122)
-
-[node name="Moving Platform" parent="." instance=ExtResource("8_5rbe0")]
-axis_lock_linear_x = false
-axis_lock_linear_y = false
-axis_lock_linear_z = false
-axis_lock_angular_y = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "room1-platform1"
-libraries = {
-"": SubResource("AnimationLibrary_jjd4k")
-}
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49423, 1.07252, -4.98209)
 
 [editable path="Te4t_platform10"]
