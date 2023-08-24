@@ -1,5 +1,11 @@
+res://Objects/bigger_key.tscn
+res://Rooms/room0.tscn
 res://Objects/doorway.tscn
 res://Objects/big_key.tscn
 res://Scenes/the_maze.tscn
-res://Rooms/room2.tscn
-res://Rooms/room0.tscn
+res://Objects/big_chest.tscn
+res://Scripts/big_chest.gd
+res://Scripts/collectablecontrol.gd
+res://Scripts/maze_control.gd
+res://roomsarray.gd
+res://Rooms/rooms array.tres

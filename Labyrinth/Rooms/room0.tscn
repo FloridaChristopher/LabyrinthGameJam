@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://brxx65eh0t5mh"]
+[gd_scene load_steps=10 format=3 uid="uid://brxx65eh0t5mh"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_h4cj0"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_0m50l"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_nyqn0"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_fh0vx"]
 [ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="7_ulg30"]
+[ext_resource type="PackedScene" uid="uid://c4b6eo85fa5xl" path="res://Objects/big_chest.tscn" id="8_g87gp"]
+[ext_resource type="PackedScene" uid="uid://rag02nht8chh" path="res://Objects/bigger_key.tscn" id="9_tqk6q"]
 
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_h4cj0")
@@ -73,6 +75,7 @@ connectedRoom = 2
 [node name="Doorway2" parent="." instance=ExtResource("5_nyqn0")]
 transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -7.64101)
 skeleton = NodePath("../..")
+locked = true
 exit = 1
 connectedRoom = 1
 
@@ -112,10 +115,31 @@ transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.87020
 [node name="Te4t_platform2" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
 
+[node name="Te4t_platform12" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -16.3259)
+
+[node name="Te4t_platform13" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -18.7183)
+
 [node name="Te4t_platform3" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
 
 [node name="BigKey" parent="." instance=ExtResource("7_ulg30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49423, 1.07252, -4.98209)
+
+[node name="Big Chest" parent="." instance=ExtResource("8_g87gp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.469556, -16.9393)
+
+[node name="BigKey2" parent="." instance=ExtResource("9_tqk6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09459, -0.462566, -7.26441)
+
+[node name="BigKey3" parent="." instance=ExtResource("9_tqk6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166559, -0.462566, -7.30935)
+
+[node name="BigKey4" parent="." instance=ExtResource("9_tqk6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73695, -0.462566, -7.63201)
+
+[node name="BigKey5" parent="." instance=ExtResource("9_tqk6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300476, -0.462566, -7.9316)
 
 [editable path="Te4t_platform10"]

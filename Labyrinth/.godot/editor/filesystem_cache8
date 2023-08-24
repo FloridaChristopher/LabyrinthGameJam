@@ -1,37 +1,41 @@
 2a60927148abd1d33b818b535e306557
-::res://::1692831895
+::res://::1692882877
 icon.svg::CompressedTexture2D::6075953148470637611::1692625528::1692625647::1::::<><>::
+roomsarray.gd::GDScript::-1::1692886711::0::1::::rooms_array<>Resource<>::
 UI_theme.tres::Theme::9124157347361161279::1692640847::0::1::::<><>::uid://doisj3xe6yfy0
 ::res://Animations/::1692640503
 ::res://Fonts/::1692640734
 ParkLaneNF.ttf::FontFile::8159531368467598797::1692640734::1692640734::1::::<><>::
-::res://Models/::1692831082
+::res://Models/::1692882586
 arch.obj::Mesh::8487672059206327113::1692629365::1692629366::1::::<><>::
+big chest.obj::Mesh::2732961678173439522::1692882586::1692882586::1::::<><>::
 Big key.obj::Mesh::6699641309187816898::1692659934::1692659935::1::::<><>::
 Bigger key.obj::Mesh::1721456146065668387::1692813558::1692813562::1::::<><>::
 collum.obj::Mesh::2213157435605181270::1692629005::1692629005::1::::<><>::
 doorway.obj::Mesh::8654680382509222665::1692629817::1692629821::1::::<><>::
 lock gate.obj::Mesh::941017655229540826::1692831049::1692831082::1::::<><>::
-::res://Objects/::1692831743
-bigger_key.tscn::PackedScene::1193620727208420949::1692831634::0::1::::<><>::res://Scripts/key.gd<>uid://yr5epxnc45b8<>uid://c2pmd4ijsjnlq
-big_key.tscn::PackedScene::5062095369564218797::1692831743::0::1::::<><>::uid://c2pmd4ijsjnlq<>res://Scripts/key.gd
-doorway.tscn::PackedScene::4896568656578926627::1692831743::0::1::::<><>::uid://dhbaxou0v4b5o<>uid://dvknk6txtcfxh<>res://Scripts/warpdoor.gd<>uid://nn3onljle7bi
+::res://Objects/::1692886526
+bigger_key.tscn::PackedScene::1193620727208420949::1692886526::0::1::::<><>::res://Scripts/key.gd<>uid://yr5epxnc45b8
+big_chest.tscn::PackedScene::6812272368269808609::1692886526::0::1::::<><>::uid://be64qkmgl5dyg<>res://Scripts/big_chest.gd
+big_key.tscn::PackedScene::5062095369564218797::1692886525::0::1::::<><>::uid://c2pmd4ijsjnlq<>res://Scripts/key.gd
+doorway.tscn::PackedScene::4896568656578926627::1692886525::0::1::::<><>::uid://dhbaxou0v4b5o<>uid://dvknk6txtcfxh<>res://Scripts/warpdoor.gd<>uid://nn3onljle7bi
 movable_platform.tscn::PackedScene::4266592586985181971::1692831743::0::1::::<><>::uid://dhbaxou0v4b5o
 te_4t_platform.tscn::PackedScene::2375700437597240569::1692831743::0::1::::<><>::uid://dhbaxou0v4b5o<>res://Scripts/playerdist.gd
-::res://Rooms/::1692831743
-room0.tscn::PackedScene::3628565146559667103::1692831512::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://ceed8awj3lsqn
+::res://Rooms/::1692886526
+room0.tscn::PackedScene::3628565146559667103::1692886526::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://ceed8awj3lsqn<>uid://c4b6eo85fa5xl<>uid://rag02nht8chh
 room1.tscn::PackedScene::4483188568276488286::1692831512::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://b111fk8cj70p8<>uid://rag02nht8chh
-room2.tscn::PackedScene::4281912683864201043::1692831512::0::1::::<><>::uid://6scm53rj64q1<>res://Scripts/Room.gd<>uid://832o6u5ts2pp<>uid://dhbaxou0v4b5o<>uid://cb061gs4qifx8<>uid://rag02nht8chh
-::res://Scenes/::1692831744
+room2.tscn::PackedScene::4281912683864201043::1692832026::0::1::::<><>::uid://6scm53rj64q1<>res://Scripts/Room.gd<>uid://832o6u5ts2pp<>uid://dhbaxou0v4b5o<>uid://cb061gs4qifx8<>uid://rag02nht8chh
+::res://Scenes/::1692886574
 player.tscn::PackedScene::6177875006135969443::1692831743::0::1::::<><>::res://Scripts/playerphys2.gd<>res://Scripts/animator.gd<>res://Scripts/playerresetter.gd
-the_maze.tscn::PackedScene::3806666366894788050::1692831744::0::1::::<><>::res://Scripts/maze_control.gd<>uid://cuaux0000u4ex<>uid://brxx65eh0t5mh<>uid://b44xpwublo52q<>uid://bwfdo48507jyo<>res://Scripts/camerascroll.gd<>res://Scripts/collectablecontrol.gd<>uid://cdb6cv8ygoi3v<>res://Scripts/Debug2.gd<>uid://doisj3xe6yfy0
-::res://Scripts/::1692831093
+the_maze.tscn::PackedScene::3806666366894788050::1692886711::0::1::::<><>::res://Scripts/maze_control.gd<>uid://cuaux0000u4ex<>uid://brxx65eh0t5mh<>uid://b44xpwublo52q<>uid://b2agqgu2qu5vr<>res://Scripts/camerascroll.gd<>res://Scripts/collectablecontrol.gd<>uid://cdb6cv8ygoi3v<>res://Scripts/Debug2.gd<>uid://doisj3xe6yfy0
+::res://Scripts/::1692886429
 animator.gd::GDScript::-1::1692831093::0::1::::<>Node3D<>::
+big_chest.gd::GDScript::-1::1692885451::0::1::::<>Node3D<>::
 camerascroll.gd::GDScript::-1::1692625528::0::1::::<>Node3D<>::
-collectablecontrol.gd::GDScript::-1::1692831093::0::1::::<>RichTextLabel<>::
+collectablecontrol.gd::GDScript::-1::1692886429::0::1::::<>RichTextLabel<>::
 Debug2.gd::GDScript::-1::1692831093::0::1::::<>RichTextLabel<>::
 key.gd::GDScript::-1::1692831093::0::1::::<>Area3D<>::
-maze_control.gd::GDScript::-1::1692831093::0::1::::<>Node3D<>::
+maze_control.gd::GDScript::-1::1692885774::0::1::::<>Node3D<>::
 playerdist.gd::GDScript::-1::1692831093::0::1::::<>MeshInstance3D<>::
 playerphys2.gd::GDScript::-1::1692831093::0::1::::playerphys2<>CharacterBody3D<>::
 playerphys.gd::GDScript::-1::1692831093::0::1::::playerphys<>RigidBody3D<>::

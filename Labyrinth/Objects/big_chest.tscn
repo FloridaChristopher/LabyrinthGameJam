@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4b6eo85fa5xl"]
+
+[ext_resource type="ArrayMesh" uid="uid://be64qkmgl5dyg" path="res://Models/big chest.obj" id="1_e12rw"]
+[ext_resource type="Script" path="res://Scripts/big_chest.gd" id="1_sedc0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6qiy"]
+albedo_color = Color(0.27451, 0.27451, 0.27451, 1)
+metallic = 1.0
+roughness = 0.49
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_se4a5"]
+size = Vector3(2.023, 0.924, 1.185)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3jgoh"]
+size = Vector3(1.787, 1, 1)
+
+[node name="Big Chest" type="StaticBody3D"]
+script = ExtResource("1_sedc0")
+
+[node name="BigChest" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.638787, 0, 0, 0, 0.638787, 0, 0, 0, 0.638787, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_a6qiy")
+mesh = ExtResource("1_e12rw")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.527512, -0.255733)
+shape = SubResource("BoxShape3D_se4a5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.482575, -0.267483)
+shape = SubResource("BoxShape3D_3jgoh")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

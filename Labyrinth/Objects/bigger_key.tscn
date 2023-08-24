@@ -1,18 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://rag02nht8chh"]
+[gd_scene load_steps=8 format=3 uid="uid://rag02nht8chh"]
 
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_s7i48"]
 [ext_resource type="ArrayMesh" uid="uid://yr5epxnc45b8" path="res://Models/Bigger key.obj" id="2_47nk2"]
-[ext_resource type="ArrayMesh" uid="uid://c2pmd4ijsjnlq" path="res://Models/Big key.obj" id="2_b0n57"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mki5a"]
 albedo_color = Color(0.27451, 0.27451, 0.27451, 1)
 metallic = 1.0
 roughness = 0.49
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5sd7"]
-albedo_color = Color(0.752941, 0.639216, 0.4, 1)
-metallic = 1.0
-roughness = 0.56
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fj8e8"]
 radius = 0.335
@@ -92,13 +86,6 @@ transform = Transform3D(0.399583, 3.0397e-10, 0.0162673, -0.00510268, 0.37973, 0
 material_override = SubResource("StandardMaterial3D_mki5a")
 mesh = ExtResource("2_47nk2")
 skeleton = NodePath("../..")
-
-[node name="BigKey" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(0.37248, 7.36592e-05, 0.000307003, -0.000190176, 0.341459, 0.148817, -0.000252012, -0.148817, 0.341459, 0, 0.0314566, 0.111401)
-visible = false
-material_override = SubResource("StandardMaterial3D_y5sd7")
-mesh = ExtResource("2_b0n57")
-skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.289194, 0)

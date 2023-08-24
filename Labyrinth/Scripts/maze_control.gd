@@ -1,6 +1,8 @@
 extends Node3D
 
-@export var rooms: Array[Resource]
+
+@export var roomsarray: Resource
+var rooms: Array[Resource]
 
 @export var currentscene: int = 0
 
@@ -8,6 +10,7 @@ var roomsData = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	rooms = roomsarray.arr
 	for i in range(0,rooms.size()):
 		roomsData.append(room_data.new())
 	
@@ -31,4 +34,9 @@ func opened_door(id:int):
 	roomsData[currentscene].doors_unlocked.append(id)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
+
+func opened_chest():
+	get_tree().get_nodes_in_group("UI").pop_front().show_final_time()
+	load_room(rooms.size()-1,0)
 	pass

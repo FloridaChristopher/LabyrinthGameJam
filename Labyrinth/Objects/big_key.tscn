@@ -90,7 +90,7 @@ transitions = ["Start", "keyspin", SubResource("AnimationNodeStateMachineTransit
 script = ExtResource("1_kah3o")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(-0.748473, 0, 0.663165, 0, 1, 0, -0.663165, 0, -0.748473, 0, 0.0524707, 0)
+transform = Transform3D(0.766258, 0, -0.642532, 0, 1, 0, 0.642532, 0, 0.766258, 0, 0.0151513, 0)
 
 [node name="BigKey" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(0.37248, 0, 0, 0, 0.341718, 0.148222, 0, -0.148222, 0.341718, 0, 0.0314566, 0.111401)

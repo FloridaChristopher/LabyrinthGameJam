@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="rooms_array" load_steps=5 format=3 uid="uid://dit8ljbjt3lmd"]
+
+[ext_resource type="PackedScene" uid="uid://brxx65eh0t5mh" path="res://Rooms/room0.tscn" id="1_nitxj"]
+[ext_resource type="Script" path="res://Scripts/roomsarray.gd" id="1_qhv5y"]
+[ext_resource type="PackedScene" uid="uid://b44xpwublo52q" path="res://Rooms/room1.tscn" id="2_ppclc"]
+[ext_resource type="PackedScene" uid="uid://b2agqgu2qu5vr" path="res://Rooms/room2.tscn" id="3_0orbx"]
+
+[resource]
+script = ExtResource("1_qhv5y")
+arr = Array[Resource]([ExtResource("1_nitxj"), ExtResource("2_ppclc"), ExtResource("3_0orbx")])
