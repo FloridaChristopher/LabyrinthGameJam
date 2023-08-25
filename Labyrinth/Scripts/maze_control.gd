@@ -24,6 +24,7 @@ func load_room(id:int,door:int):
 		thing.queue_free()
 	var currentroom = rooms[id].instantiate()
 	add_child(currentroom)
+	get_tree().get_nodes_in_group("Player").pop_front().global_position = Vector3.ZERO
 	currentroom.place_player(door)
 	currentroom.load_data(roomsData[id])
 

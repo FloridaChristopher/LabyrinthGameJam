@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnok18d8ngbbr"]
+
+[ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="1_1uxaf"]
+
+[node name="moive platform 2" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.00864)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.00864)
+
+[node name="Moving Platform" parent="Node3D" instance=ExtResource("1_1uxaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37882, 0, -3.05512)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/maze_control.gd" id="1_amh2u"]
 [ext_resource type="PackedScene" uid="uid://cuaux0000u4ex" path="res://Scenes/player.tscn" id="1_opeje"]
-[ext_resource type="Resource" uid="uid://dit8ljbjt3lmd" path="res://Rooms/rooms array.tres" id="2_tary6"]
+[ext_resource type="Resource" uid="uid://sidsrnpedt4o" path="res://Rooms/rooms array.tres" id="2_tary6"]
 [ext_resource type="Script" path="res://Scripts/camerascroll.gd" id="4_ors2s"]
 [ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
 [ext_resource type="PackedScene" uid="uid://cdb6cv8ygoi3v" path="res://UI/bigger_key_icon.tscn" id="8_gstgy"]

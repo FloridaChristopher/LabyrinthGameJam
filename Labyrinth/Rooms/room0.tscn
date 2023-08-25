@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://brxx65eh0t5mh"]
+[gd_scene load_steps=8 format=3 uid="uid://brxx65eh0t5mh"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_h4cj0"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_0m50l"]
@@ -6,57 +6,91 @@
 [ext_resource type="ArrayMesh" uid="uid://ds6qyo41p0yqr" path="res://Models/arch.obj" id="4_ye42f"]
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_nyqn0"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_fh0vx"]
-[ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="7_ulg30"]
 [ext_resource type="PackedScene" uid="uid://c4b6eo85fa5xl" path="res://Objects/big_chest.tscn" id="8_g87gp"]
-[ext_resource type="PackedScene" uid="uid://rag02nht8chh" path="res://Objects/bigger_key.tscn" id="9_tqk6q"]
 
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_h4cj0")
 
 [node name="Collum2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -1.47612)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, 1.27037)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -1.47612)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, 1.27037)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -6.32155)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -3.57506)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -6.32155)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -3.57506)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum18" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -7.75879)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum19" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -7.75879)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum20" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -12.6042)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum21" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -12.6042)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum22" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -16.8291)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum23" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -16.8291)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum6" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -11.2065)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -20.9976)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum7" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -11.2065)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -20.9976)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum8" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -16.1952)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -25.9863)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
 
 [node name="Collum9" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -16.1952)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -25.9863)
 material_override = ExtResource("2_0m50l")
 mesh = ExtResource("3_nnif4")
 skeleton = NodePath("../..")
@@ -68,22 +102,52 @@ material_override = ExtResource("2_0m50l")
 mesh = ExtResource("4_ye42f")
 skeleton = NodePath("../..")
 
-[node name="Doorway" parent="." instance=ExtResource("5_nyqn0")]
-skeleton = NodePath("../..")
-connectedRoom = 2
-
 [node name="Doorway2" parent="." instance=ExtResource("5_nyqn0")]
-transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -7.64101)
+transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.39933, -0.462566, -42.0167)
 skeleton = NodePath("../..")
 locked = true
 exit = 1
+connectedRoom = 3
+
+[node name="Doorway3" parent="." instance=ExtResource("5_nyqn0")]
+transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.3389, -0.462566, -42.0167)
+skeleton = NodePath("../..")
 connectedRoom = 1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55773, 2.16938, -4.00025)
 
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84838, 0.714475, -12.5894)
+light_color = Color(1, 0.878431, 0.576471, 1)
+omni_range = 2.494
+
 [node name="Te4t_platform" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.177608)
+
+[node name="Te4t_platform22" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.09437)
+
+[node name="Te4t_platform23" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.38419e-07, -0.970881, -4.42182)
+
+[node name="Te4t_platform24" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 4.76837e-07, -0.169109, -5.15069)
+
+[node name="Te4t_platform27" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 4.76837e-07, -1.13702, -8.20735)
+
+[node name="Te4t_platform29" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -1, -1.6806e-07, 0, 8.74228e-08, -1.92238, 4.76837e-07, -3.37728, -12.3289)
+
+[node name="Te4t_platform30" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.76837e-07, -1.88928, -10.2059)
+
+[node name="Te4t_platform31" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1.34002, 0, -1, -5.8574e-08, 4.76837e-07, -1.88928, -15.7031)
+
+[node name="Te4t_platform28" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, 1.31134e-07, -1, 0, 1, 1.31134e-07, 4.76837e-07, -0.902353, -6.04653)
 
 [node name="Te4t_platform10" parent="." instance=ExtResource("6_fh0vx")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0.816894)
@@ -92,54 +156,156 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 visible = false
 
 [node name="Te4t_platform6" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -2.02519, 0.125882, -2.65456)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.7609, 0.125882, -12.6581)
+
+[node name="Te4t_platform32" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.51209, -1.48678, -12.6581)
+
+[node name="Te4t_platform33" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -0.00287783, -0.886214, -14.3544)
 
 [node name="Te4t_platform11" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.267172, 0, 0, 0, 0.524977, 0, 0, 0, 0.423047, -1.46216, 1.29028, -4.89441)
+transform = Transform3D(0.267172, 0, 0, 0, 0.524977, 0, 0, 0, 0.423047, -1.49057, -0.577615, -18.0851)
+
+[node name="Te4t_platform35" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(0.452594, 0, 0, 0, 0.524977, 0, 0, 0, 0.653635, 1.9339, 0.653097, -22.4995)
 
 [node name="Te4t_platform7" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.10794, 0.610909, -3.56499)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 1.45175, 0.319426, -18.4926)
+
+[node name="Te4t_platform34" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1.06339, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -0.222392, 0.415968, -15.7205)
 
 [node name="Te4t_platform8" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, 0.610909, -10.5939)
+transform = Transform3D(0.750499, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.37561, 1.00531, -20.5515)
+
+[node name="Te4t_platform42" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(0.275968, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -2.29949, 0.517717, -27.2509)
 
 [node name="Te4t_platform9" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, -0.398217, -13.4703)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -0.492022, -0.826965, -22.7987)
+
+[node name="Te4t_platform16" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-2.29475e-08, 0, -0.886018, 0, 0.524977, 0, 0.524977, 0, -3.87291e-08, 1.59932, 0.0492086, -25.8532)
+
+[node name="Te4t_platform17" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-2.29475e-08, 0, -0.524977, 0, 0.524977, 0, 0.524977, 0, -2.29475e-08, -0.976958, -1.60365, -28.8696)
+
+[node name="Te4t_platform36" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-2.29475e-08, 0, -0.524977, 0, 0.524977, 0, 0.524977, 0, -2.29475e-08, -0.976958, -0.530608, -32.8841)
+
+[node name="Te4t_platform37" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-9.48624e-09, 0, -0.809405, 0, 0.524977, 0, 0.21702, 0, -3.53802e-08, -1.5705, -0.52117, -37.0873)
+
+[node name="Te4t_platform18" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-2.29475e-08, 0, -1.08891, 0, 0.524977, 0, 0.524977, 0, -4.75979e-08, 1.86103, 0.950729, -31.552)
+
+[node name="Te4t_platform39" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-0.524977, 0, 4.5895e-08, 0, 0.524977, 0, -4.5895e-08, 0, -0.524977, 1.66115, -0.333108, -34.4217)
+
+[node name="Te4t_platform40" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-0.266327, 0, 4.5895e-08, 0, 0.524977, 0, -2.3283e-08, 0, -0.524977, 1.2382, 0.215881, -37.5029)
+
+[node name="Te4t_platform41" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-0.266327, 0, 4.5895e-08, 0, 0.524977, 0, -2.3283e-08, 0, -0.524977, -0.717599, 1.55775, -34.1032)
+
+[node name="Te4t_platform38" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-8.81102e-09, 0, -1.08891, 0.201573, -2.29475e-08, -4.75979e-08, -8.81102e-09, -0.524977, 2.08057e-15, 1.86811, 0.210633, -30.6287)
+
+[node name="Te4t_platform19" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-1.36395e-08, 0, -0.858999, 0, 0.524977, 0, 0.312035, 0, -3.75481e-08, 1.5083, 0.0514944, -29.5844)
 
 [node name="Te4t_platform4" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -8.71853)
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -2.11372, 4.02305, -4.37114e-08, -9.23936e-08, 1.88546, -1.34658, -8.71853)
 
 [node name="Te4t_platform5" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, -3.21068, 0.541584, -8.71853)
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -2.11372, 4.02305, -4.37114e-08, -9.23936e-08, -3.21068, -1.34658, -8.71853)
+
+[node name="Te4t_platform25" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -20.9234)
+
+[node name="Te4t_platform26" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -2.11372, 4.02305, -4.37114e-08, -9.23936e-08, -3.21068, -1.34658, -20.9234)
+
+[node name="Collum10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -30.9552)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum24" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 0.62841, -5.26304, -29.6569)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -30.9552)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -35.8006)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -35.8006)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -40.6856)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum15" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -40.6856)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum16" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -45.6743)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Collum17" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -45.6743)
+material_override = ExtResource("2_0m50l")
+mesh = ExtResource("3_nnif4")
+skeleton = NodePath("../..")
+
+[node name="Te4t_platform14" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -1.46754, 4.02305, -4.37114e-08, -6.41482e-08, 1.88546, -0.36949, -38.1976)
+
+[node name="Te4t_platform15" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -1.46754, 4.02305, -4.37114e-08, -6.41482e-08, -3.21068, -0.36949, -38.1976)
 
 [node name="Te4t_platform2" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -42.0251)
 
 [node name="Te4t_platform12" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -16.3259)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0.22962, -44.6202)
+
+[node name="Te4t_platform20" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 2.38419e-07, 0.45945, -44.9648)
 
 [node name="Te4t_platform13" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -18.7183)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -47.0126)
+
+[node name="Te4t_platform21" parent="." instance=ExtResource("6_fh0vx")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 0.887152, 0, -1, -3.87786e-08, 0, 0.527016, -48.8414)
 
 [node name="Te4t_platform3" parent="." instance=ExtResource("6_fh0vx")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -5.69906)
-
-[node name="BigKey" parent="." instance=ExtResource("7_ulg30")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49423, 1.07252, -4.98209)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.96166, -40.0748)
 
 [node name="Big Chest" parent="." instance=ExtResource("8_g87gp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.469556, -16.9393)
-
-[node name="BigKey2" parent="." instance=ExtResource("9_tqk6q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.09459, -0.462566, -7.26441)
-
-[node name="BigKey3" parent="." instance=ExtResource("9_tqk6q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166559, -0.462566, -7.30935)
-
-[node name="BigKey4" parent="." instance=ExtResource("9_tqk6q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73695, -0.462566, -7.63201)
-
-[node name="BigKey5" parent="." instance=ExtResource("9_tqk6q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.300476, -0.462566, -7.9316)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, -0.0101055, -45.5782)
 
 [editable path="Te4t_platform10"]
