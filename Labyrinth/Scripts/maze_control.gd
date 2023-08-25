@@ -28,6 +28,7 @@ func load_room(id:int,door:int):
 	
 	currentroom.place_player(door)
 	currentroom.load_data(roomsData[id])
+	#currentroom.activate_doors()
 
 func got_key(id:int):
 	roomsData[currentscene].keys_collected.append(id)

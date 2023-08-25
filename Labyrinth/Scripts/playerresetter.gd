@@ -11,7 +11,7 @@ func _ready():
 
 
 func _on_body_entered(body):
-	print("sddsd")
+	#print("sddsd")
 	if body.is_in_group("BottomlessPit"):
 		print("hit pit")
 		thing.global_position = thing.origionalpos

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://buh8ief2eol35"]
+[gd_scene load_steps=14 format=3 uid="uid://buh8ief2eol35"]
 
 [ext_resource type="Script" path="res://Scripts/maze_control.gd" id="1_amh2u"]
 [ext_resource type="PackedScene" uid="uid://cuaux0000u4ex" path="res://Scenes/player.tscn" id="1_opeje"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
 [ext_resource type="PackedScene" uid="uid://cdb6cv8ygoi3v" path="res://UI/bigger_key_icon.tscn" id="8_gstgy"]
 [ext_resource type="Script" path="res://Scripts/Debug2.gd" id="8_w72b8"]
+[ext_resource type="AudioStream" uid="uid://pogkcmlmsh4x" path="res://Music/The_Delve.mp3" id="9_hgciq"]
 [ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]
@@ -132,6 +133,7 @@ theme_override_fonts/normal_font = ExtResource("9_u1q61")
 theme_override_font_sizes/normal_font_size = 45
 text = "Keys 99"
 script = ExtResource("7_n5gk5")
+keys = 1
 pos = NodePath("../Node2D")
 bigkeyprefab = ExtResource("8_gstgy")
 timertext = NodePath("../RichTextLabel2")
@@ -164,3 +166,7 @@ text = "Debug:
 "
 script = ExtResource("8_w72b8")
 player = NodePath("../../Player")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_hgciq")
+autoplay = true

@@ -1,8 +1,8 @@
 extends RichTextLabel
 
 
-var keys: int = 0
-var bigKeys: int = 0
+@export var keys: int = 0
+@export var bigKeys: int = 0
 var time: float = 0
 
 @export var pos: Node2D

@@ -1,21 +1,19 @@
-res://Objects/doorway.tscn
-res://Rooms/rooms array.tres
-res://Objects/big_key.tscn
 res://Scenes/the_maze.tscn
-res://Rooms/room0.tscn
-res://Objects/bigger_key.tscn
-res://Objects/big_chest.tscn
-res://Rooms/room3.tscn
-res://Objects/bars.tscn
-res://Rooms/room1.tscn
-res://Scripts/maze_control.gd
-res://Objects/movable_platform.tscn
+res://Rooms/rooms array.tres
 res://Rooms/room7.tscn
+res://Rooms/room0.tscn
+res://Rooms/room3.tscn
 res://Objects/moive_platform_2.tscn
-res://Rooms/room2.tscn
-res://Objects/rear wall.tscn
-res://Rooms/room9.tscn
+res://Rooms/room1.tscn
 res://Rooms/roomA.tscn
+res://Rooms/room2.tscn
 res://Rooms/key1.tscn
 res://Rooms/roomFinal.tscn
 res://Rooms/room6.tscn
+res://Scripts/warpdoor.gd
+res://Scripts/Room.gd
+res://Scripts/maze_control.gd
+res://Scripts/playerresetter.gd
+res://Objects/doorway.tscn
+res://Scripts/collectablecontrol.gd
+res://Rooms/key2.tscn

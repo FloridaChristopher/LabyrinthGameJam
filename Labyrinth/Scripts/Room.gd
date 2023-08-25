@@ -33,6 +33,11 @@ func place_player(door:int):
 		if dord.exit == door:
 			player.global_position = dord.spawnpoint.global_position
 			player.origionalpos = dord.spawnpoint.global_position
+	
+
+func activate_doors():
+	for dord in doors:
+		dord.canWarp = true
 
 func load_data(data:room_data):
 	print("loading room data")

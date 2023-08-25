@@ -12,6 +12,21 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_hmr1w"]
 size = Vector3(2.716, 4.086, 2.949)
 
+[sub_resource type="Animation" id="Animation_v4jwo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.79708, 0, -2.84447)]
+}
+
 [sub_resource type="Animation" id="Animation_gtsuy"]
 resource_name = "new_animation"
 length = 7.0
@@ -27,21 +42,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.79708, 0, -2.84447), Vector3(-1.79708, 0, -2.84447), Vector3(1.34048, 0, -2.84447), Vector3(1.34048, 0, -2.84447)]
-}
-
-[sub_resource type="Animation" id="Animation_v4jwo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.79708, 0, -2.84447)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qypv2"]
@@ -71,7 +71,6 @@ material_override = ExtResource("2_xudgf")
 mesh = ExtResource("1_atmyn")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Collum8"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collum8/StaticBody3D"]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 13.6133, 0)
