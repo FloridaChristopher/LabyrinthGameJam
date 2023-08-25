@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/collectablecontrol.gd" id="7_n5gk5"]
 [ext_resource type="PackedScene" uid="uid://cdb6cv8ygoi3v" path="res://UI/bigger_key_icon.tscn" id="8_gstgy"]
 [ext_resource type="Script" path="res://Scripts/Debug2.gd" id="8_w72b8"]
-[ext_resource type="AudioStream" uid="uid://pogkcmlmsh4x" path="res://Music/The_Delve.mp3" id="9_hgciq"]
+[ext_resource type="AudioStream" uid="uid://bsx1koplxumy7" path="res://Music/The_Delve.mp3" id="9_hgciq"]
 [ext_resource type="FontFile" uid="uid://doisj3xe6yfy0" path="res://Fonts/ParkLaneNF.ttf" id="9_u1q61"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_snw16"]

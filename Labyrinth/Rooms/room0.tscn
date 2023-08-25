@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://brxx65eh0t5mh"]
+[gd_scene load_steps=8 format=3 uid="uid://brxx65eh0t5mh"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_h4cj0"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_0m50l"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_nyqn0"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_fh0vx"]
 [ext_resource type="PackedScene" uid="uid://c4b6eo85fa5xl" path="res://Objects/big_chest.tscn" id="8_g87gp"]
-[ext_resource type="PackedScene" uid="uid://ccncpm1ri0kv0" path="res://Objects/big_key.tscn" id="8_mse1c"]
 
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_h4cj0")
@@ -308,8 +307,5 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.
 
 [node name="Big Chest" parent="." instance=ExtResource("8_g87gp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, -0.0101055, -45.5782)
-
-[node name="BigKey" parent="." instance=ExtResource("8_mse1c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.318345, -0.462566, -2.9077)
 
 [editable path="Te4t_platform10"]
