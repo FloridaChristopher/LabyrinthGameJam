@@ -1,0 +1,189 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn0kibmf58qsc"]
+
+[ext_resource type="Script" path="res://Scripts/Room.gd" id="1_eygr2"]
+[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_spmc7"]
+[ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="3_meaeu"]
+[ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="4_fwkom"]
+[ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="5_o5er3"]
+[ext_resource type="PackedScene" uid="uid://4wy6oeata46e" path="res://Objects/bars.tscn" id="6_30y15"]
+[ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="8_43rea"]
+
+[sub_resource type="Animation" id="Animation_754rf"]
+resource_name = "new_animation"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Moving Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.28287, 0, -2.7409), Vector3(-1.28287, 0, -2.7409), Vector3(1.15802, 0, -2.7409), Vector3(1.15802, 0, -2.7409)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Moving Platform2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.29523, 0, -4.77714), Vector3(-1.29523, 0, -4.77714), Vector3(1.1807, 0, -4.77714), Vector3(1.1807, 0, -4.77714)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Moving Platform3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 3, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.26789, 0, -6.75181), Vector3(-1.26789, 0, -6.75181), Vector3(1.17877, 0, -6.75181), Vector3(1.17877, 0, -6.75181)]
+}
+
+[sub_resource type="Animation" id="Animation_680dl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Moving Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.28287, 0, -2.7409)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Moving Platform2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.29523, 0, -4.77714)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Moving Platform3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.26789, 0, -6.75181)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wutw"]
+_data = {
+"RESET": SubResource("Animation_680dl"),
+"new_animation": SubResource("Animation_754rf")
+}
+
+[node name="Room" type="Node3D" groups=["Room"]]
+script = ExtResource("1_eygr2")
+
+[node name="Collum2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -1.47612)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -1.47612)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, 1.30587)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, 1.30587)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -4.51052)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -4.51052)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Doorway" parent="." instance=ExtResource("4_fwkom")]
+transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.32971, -0.462566, -0.0587712)
+skeleton = NodePath("../..")
+exit = 1
+connectedRoom = 1
+
+[node name="Doorway2" parent="." instance=ExtResource("4_fwkom")]
+transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.32345, -0.462566, -9.79756)
+skeleton = NodePath("../..")
+exit = 2
+connectedRoom = 5
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47965, 1.35957, -1.50907)
+light_color = Color(0.898039, 0.47451, 0.286275, 1)
+light_energy = 0.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7557, 1.35957, -1.50907)
+light_color = Color(0.898039, 0.47451, 0.286275, 1)
+light_energy = 0.5
+
+[node name="Te4t_platform" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.177608)
+
+[node name="Te4t_platform2" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.46068, 0, 0, -10.5388)
+
+[node name="Te4t_platform4" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, 1.88546, 0.541584, -4.9979)
+
+[node name="Te4t_platform5" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, -3.24869, 0.541584, -4.9979)
+
+[node name="Te4t_platform6" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(-1.2, 8.74228e-08, 3.80289e-08, -5.24537e-08, 1.91069e-15, -0.87, -1.04907e-07, -1, 1.6623e-15, -0.0697698, 0.541584, -11.8996)
+
+[node name="Te4t_platform3" parent="." instance=ExtResource("6_30y15")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.486556, -0.462566, -4.20767)
+
+[node name="Moving Platform3" parent="." instance=ExtResource("8_43rea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26789, 0, -6.75181)
+
+[node name="Moving Platform2" parent="." instance=ExtResource("8_43rea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29523, 0, -4.77714)
+
+[node name="Moving Platform" parent="." instance=ExtResource("8_43rea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28287, 0, -2.7409)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_6wutw")
+}

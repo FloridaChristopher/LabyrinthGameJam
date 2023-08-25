@@ -168,7 +168,7 @@ connectedRoom = 2
 transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.48593, -0.462566, -16.4255)
 skeleton = NodePath("../..")
 exit = 1
-connectedRoom = 2
+connectedRoom = 4
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55773, 2.16938, -4.00025)

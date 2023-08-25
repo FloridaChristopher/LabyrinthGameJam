@@ -1,9 +1,9 @@
+StaticBody3D
+CollisionShape3D
 AnimationPlayer
 Node3D
 AnimationTree
 Node2D
-CollisionShape3D
-StaticBody3D
 Area3D
 RichTextLabel
 CharacterBody3D
