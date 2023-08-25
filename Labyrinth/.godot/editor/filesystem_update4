@@ -17,3 +17,5 @@ res://Scripts/playerresetter.gd
 res://Objects/doorway.tscn
 res://Scripts/collectablecontrol.gd
 res://Rooms/key2.tscn
+res://Objects/big_key.tscn
+res://Scripts/key.gd

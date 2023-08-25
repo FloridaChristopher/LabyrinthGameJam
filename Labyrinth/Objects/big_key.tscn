@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ceed8awj3lsqn"]
+[gd_scene load_steps=13 format=3 uid="uid://ccncpm1ri0kv0"]
 
 [ext_resource type="ArrayMesh" uid="uid://c2pmd4ijsjnlq" path="res://Models/Big key.obj" id="1_jps3x"]
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_kah3o"]
+[ext_resource type="AudioStream" uid="uid://202l5y2tk1c2" path="res://Music/Pickup Key.mp3" id="3_ielkf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5sd7"]
 albedo_color = Color(0.752941, 0.639216, 0.4, 1)
@@ -86,11 +87,12 @@ transitions = ["Start", "keyspin", SubResource("AnimationNodeStateMachineTransit
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_0epxt"]
 
-[node name="BigKey" type="Area3D" groups=["Key"]]
+[node name="BigKey" type="Area3D" node_paths=PackedStringArray("audio") groups=["Key"]]
 script = ExtResource("1_kah3o")
+audio = NodePath("AudioStreamPlayer")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(0.766258, 0, -0.642532, 0, 1, 0, 0.642532, 0, 0.766258, 0, 0.0151513, 0)
+transform = Transform3D(0.934172, 0, -0.35682, 0, 1, 0, 0.35682, 0, 0.934172, 0, 0.00792227, 0)
 
 [node name="BigKey" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(0.37248, 0, 0, 0, 0.341718, 0.148222, 0, -0.148222, 0.341718, 0, 0.0314566, 0.111401)
@@ -114,4 +116,8 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_0epxt")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ielkf")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

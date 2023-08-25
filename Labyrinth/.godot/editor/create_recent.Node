@@ -1,5 +1,5 @@
-Timer
 AudioStreamPlayer
+Timer
 StaticBody3D
 CollisionShape3D
 AnimationPlayer

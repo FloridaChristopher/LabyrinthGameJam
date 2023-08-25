@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_5ui0a"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_hh0lo"]
 [ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="7_88nv5"]
-[ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="8_jp33r"]
+[ext_resource type="PackedScene" uid="uid://ccncpm1ri0kv0" path="res://Objects/big_key.tscn" id="8_jp33r"]
 
 [sub_resource type="Animation" id="Animation_rmhfo"]
 length = 0.001
