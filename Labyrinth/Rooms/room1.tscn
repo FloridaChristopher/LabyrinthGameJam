@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b44xpwublo52q"]
+[gd_scene load_steps=15 format=3 uid="uid://b44xpwublo52q"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_mjtdb"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_m0yci"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_5ui0a"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="6_hh0lo"]
 [ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="7_88nv5"]
+[ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="8_jp33r"]
 
 [sub_resource type="Animation" id="Animation_rmhfo"]
 length = 0.001
@@ -161,7 +162,7 @@ skeleton = NodePath("../..")
 [node name="Doorway2" parent="." instance=ExtResource("5_5ui0a")]
 transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.48593, -0.462566, -7.64101)
 skeleton = NodePath("../..")
-exit = 1
+exit = 3
 connectedRoom = 2
 
 [node name="Doorway3" parent="." instance=ExtResource("5_5ui0a")]
@@ -196,6 +197,15 @@ transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.56174
 
 [node name="Te4t_platform9" parent="." instance=ExtResource("6_hh0lo")]
 transform = Transform3D(1.1637, 0, 0, 0, 0.947674, 0, 0, 0, 1.34566, -0.00856207, -0.0418188, -16.4677)
+
+[node name="Te4t_platform15" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(0.335175, 0, 0, 0, 0.947674, -1.38866e-08, 0, 4.14241e-08, 0.317688, -1.74061, 1.23714, -13.6216)
+
+[node name="Te4t_platform16" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(0.335175, 0, 0, 0, 0.947674, -1.38866e-08, 0, 4.14241e-08, 0.317688, 1.81523, 1.74604, -14.9705)
+
+[node name="Te4t_platform17" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(0.335175, 0, 0, 0, 0.947674, -1.38866e-08, 0, 4.14241e-08, 0.317688, 1.81523, 1.74604, -17.2591)
 
 [node name="Te4t_platform14" parent="." instance=ExtResource("6_hh0lo")]
 transform = Transform3D(1.1637, 0, 0, 0, -4.14241e-08, -1.34566, 0, 0.947674, -5.88207e-08, -0.00856207, 0.0544804, -17.9786)
@@ -239,5 +249,8 @@ autoplay = "new_animation"
 libraries = {
 "": SubResource("AnimationLibrary_rkqxh")
 }
+
+[node name="BigKey" parent="." instance=ExtResource("8_jp33r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57381, 1.32505, -17.1438)
 
 [editable path="rear wall collider"]

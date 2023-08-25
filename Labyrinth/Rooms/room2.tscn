@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1dkfs7b88pj8"]
+[gd_scene load_steps=13 format=3 uid="uid://b1dkfs7b88pj8"]
 
 [ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="1_atmyn"]
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_hhkds"]
@@ -6,8 +6,11 @@
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_xudgf"]
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="5_qxkw7"]
 [ext_resource type="PackedScene" uid="uid://b111fk8cj70p8" path="res://Objects/movable_platform.tscn" id="6_klq6l"]
-[ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="7_88odb"]
 [ext_resource type="PackedScene" uid="uid://4wy6oeata46e" path="res://Objects/bars.tscn" id="7_vl3ts"]
+[ext_resource type="PackedScene" uid="uid://rag02nht8chh" path="res://Objects/bigger_key.tscn" id="8_qdxqt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmr1w"]
+size = Vector3(2.716, 4.086, 2.949)
 
 [sub_resource type="Animation" id="Animation_gtsuy"]
 resource_name = "new_animation"
@@ -62,6 +65,18 @@ material_override = ExtResource("2_xudgf")
 mesh = ExtResource("1_atmyn")
 skeleton = NodePath("../..")
 
+[node name="Collum8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.228096, 0, 0, 0, 0.198993, 0, 0, 0, 0.308606, -0.894742, -2.87737, -6.0491)
+material_override = ExtResource("2_xudgf")
+mesh = ExtResource("1_atmyn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collum8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collum8/StaticBody3D"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 13.6133, 0)
+shape = SubResource("BoxShape3D_hmr1w")
+
 [node name="Collum6" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, 1.30587)
 material_override = ExtResource("2_xudgf")
@@ -89,7 +104,7 @@ skeleton = NodePath("../..")
 [node name="Doorway" parent="." instance=ExtResource("5_qxkw7")]
 transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.32971, -0.462566, -0.0587712)
 skeleton = NodePath("../..")
-exit = 1
+exit = 3
 connectedRoom = 1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
@@ -123,9 +138,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.7861
 [node name="Te4t_platform7" parent="." instance=ExtResource("7_vl3ts")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.97361, -0.462566, -3.92366)
 
-[node name="BigKey" parent="." instance=ExtResource("7_88odb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35374, -0.462566, -6.04076)
-
 [node name="Moving Platform" parent="." instance=ExtResource("6_klq6l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79708, 0, -2.84447)
 
@@ -134,3 +146,6 @@ autoplay = "new_animation"
 libraries = {
 "": SubResource("AnimationLibrary_qypv2")
 }
+
+[node name="BigKey2" parent="." instance=ExtResource("8_qdxqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.917844, 0.306936, -6.0285)

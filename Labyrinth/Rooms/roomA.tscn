@@ -122,13 +122,37 @@ mesh = ExtResource("3_meaeu")
 skeleton = NodePath("../..")
 
 [node name="Collum4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -4.51052)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -5.32823)
 material_override = ExtResource("2_spmc7")
 mesh = ExtResource("3_meaeu")
 skeleton = NodePath("../..")
 
 [node name="Collum5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -4.51052)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -5.32823)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -9.56224)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -9.56224)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -13.7685)
+material_override = ExtResource("2_spmc7")
+mesh = ExtResource("3_meaeu")
+skeleton = NodePath("../..")
+
+[node name="Collum11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.40005, -2.63544, -13.7685)
 material_override = ExtResource("2_spmc7")
 mesh = ExtResource("3_meaeu")
 skeleton = NodePath("../..")
@@ -140,7 +164,7 @@ exit = 1
 connectedRoom = 1
 
 [node name="Doorway2" parent="." instance=ExtResource("4_fwkom")]
-transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.32345, -0.462566, -9.79756)
+transform = Transform3D(0.720406, 0, 1.2596e-07, 0, 0.720406, 0, -1.2596e-07, 0, 0.720406, 0.989486, -0.462566, -13.6862)
 skeleton = NodePath("../..")
 exit = 2
 connectedRoom = 5
@@ -159,7 +183,7 @@ light_energy = 0.5
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.177608)
 
 [node name="Te4t_platform2" parent="." instance=ExtResource("5_o5er3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.46068, 0, 0, -10.5388)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.96238, 0, 0, -11.0012)
 
 [node name="Te4t_platform4" parent="." instance=ExtResource("5_o5er3")]
 transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, 1.88546, 0.541584, -4.9979)
@@ -167,11 +191,17 @@ transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2
 [node name="Te4t_platform5" parent="." instance=ExtResource("5_o5er3")]
 transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, -3.24869, 0.541584, -4.9979)
 
+[node name="Te4t_platform7" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, 1.88546, 0.541584, -7.41968)
+
+[node name="Te4t_platform8" parent="." instance=ExtResource("5_o5er3")]
+transform = Transform3D(-1.15224e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 2.63602, -4.37114e-08, 1.6623e-15, -3.24869, 0.541584, -7.41968)
+
 [node name="Te4t_platform6" parent="." instance=ExtResource("5_o5er3")]
-transform = Transform3D(-1.2, 8.74228e-08, 3.80289e-08, -5.24537e-08, 1.91069e-15, -0.87, -1.04907e-07, -1, 1.6623e-15, -0.0697698, 0.541584, -11.8996)
+transform = Transform3D(-1.09723, 8.74228e-08, 3.80289e-08, -4.79617e-08, 1.91069e-15, -0.87, -9.5923e-08, -1, 1.6623e-15, -0.0697698, 0.541584, -14.5039)
 
 [node name="Te4t_platform3" parent="." instance=ExtResource("6_30y15")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.486556, -0.462566, -4.20767)
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.486556, -0.462566, -4.87867)
 
 [node name="Moving Platform3" parent="." instance=ExtResource("8_43rea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26789, 0, -6.75181)
