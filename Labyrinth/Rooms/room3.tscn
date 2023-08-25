@@ -65,12 +65,14 @@ exit = 1
 [node name="Doorway2" parent="." instance=ExtResource("4_ipimk")]
 transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.32971, -0.462566, -0.0928216)
 skeleton = NodePath("../..")
-connectedRoom = 3
+exit = 3
+connectedRoom = 6
 
 [node name="Doorway3" parent="." instance=ExtResource("4_ipimk")]
 transform = Transform3D(9.44699e-08, 0, -0.720406, 0, 0.720406, 0, 0.720406, 0, 9.44699e-08, 2.32971, -0.462566, -7.27598)
 skeleton = NodePath("../..")
-connectedRoom = 1
+exit = 2
+connectedRoom = 7
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47965, 1.35957, -1.50907)

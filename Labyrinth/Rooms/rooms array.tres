@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="rooms_array" load_steps=8 format=3 uid="uid://sidsrnpedt4o"]
+[gd_resource type="Resource" script_class="rooms_array" load_steps=10 format=3 uid="uid://sidsrnpedt4o"]
 
 [ext_resource type="PackedScene" uid="uid://brxx65eh0t5mh" path="res://Rooms/room0.tscn" id="1_nitxj"]
 [ext_resource type="Script" path="res://Scripts/roomsarray.gd" id="1_qhv5y"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bfhtog2xh4s4" path="res://Rooms/room3.tscn" id="4_0vvv5"]
 [ext_resource type="PackedScene" uid="uid://dn0kibmf58qsc" path="res://Rooms/roomA.tscn" id="5_b8emp"]
 [ext_resource type="PackedScene" uid="uid://d3600ed6kysne" path="res://Rooms/key1.tscn" id="6_381mh"]
+[ext_resource type="PackedScene" uid="uid://bn1d76cbwfwk8" path="res://Rooms/room6.tscn" id="7_hefgd"]
+[ext_resource type="PackedScene" uid="uid://cwigs5amus3q8" path="res://Rooms/room7.tscn" id="7_w8sj2"]
 
 [resource]
 script = ExtResource("1_qhv5y")
-arr = Array[Resource]([ExtResource("1_nitxj"), ExtResource("2_ppclc"), ExtResource("3_0orbx"), ExtResource("4_0vvv5"), ExtResource("5_b8emp"), ExtResource("6_381mh")])
+arr = Array[Resource]([ExtResource("1_nitxj"), ExtResource("2_ppclc"), ExtResource("3_0orbx"), ExtResource("4_0vvv5"), ExtResource("5_b8emp"), ExtResource("6_381mh"), ExtResource("7_hefgd"), ExtResource("7_w8sj2")])
