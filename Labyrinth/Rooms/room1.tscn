@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b44xpwublo52q"]
+[gd_scene load_steps=14 format=3 uid="uid://b44xpwublo52q"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_mjtdb"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_m0yci"]
@@ -46,6 +46,44 @@ _data = {
 "room1-platform1": SubResource("Animation_vwe8t")
 }
 
+[sub_resource type="Animation" id="Animation_bywyp"]
+resource_name = "new_animation"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Moving Platform2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1.06511, -0.473551, -9.93393), Vector3(1.06511, -0.473551, -9.93393), Vector3(1.06511, 0.977789, -9.93393), Vector3(1.06511, 0.977789, -9.93393)]
+}
+
+[sub_resource type="Animation" id="Animation_agtb0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Moving Platform2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.06511, -0.473551, -9.93393)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rkqxh"]
+_data = {
+"RESET": SubResource("Animation_agtb0"),
+"new_animation": SubResource("Animation_bywyp")
+}
+
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_mjtdb")
 
@@ -86,13 +124,25 @@ mesh = ExtResource("3_algld")
 skeleton = NodePath("../..")
 
 [node name="Collum8" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -16.1952)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -14.2415)
 material_override = ExtResource("2_m0yci")
 mesh = ExtResource("3_algld")
 skeleton = NodePath("../..")
 
 [node name="Collum9" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -16.1952)
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -14.2415)
+material_override = ExtResource("2_m0yci")
+mesh = ExtResource("3_algld")
+skeleton = NodePath("../..")
+
+[node name="Collum10" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, 2.31293, -2.63544, -18.4298)
+material_override = ExtResource("2_m0yci")
+mesh = ExtResource("3_algld")
+skeleton = NodePath("../..")
+
+[node name="Collum11" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.308348, 0, 0, 0, 0.319501, 0, 0, 0, 0.308348, -2.58707, -2.63544, -18.4298)
 material_override = ExtResource("2_m0yci")
 mesh = ExtResource("3_algld")
 skeleton = NodePath("../..")
@@ -110,6 +160,12 @@ skeleton = NodePath("../..")
 
 [node name="Doorway2" parent="." instance=ExtResource("5_5ui0a")]
 transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.48593, -0.462566, -7.64101)
+skeleton = NodePath("../..")
+exit = 1
+connectedRoom = 2
+
+[node name="Doorway3" parent="." instance=ExtResource("5_5ui0a")]
+transform = Transform3D(-1.5745e-07, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -1.5745e-07, -2.48593, -0.462566, -16.4255)
 skeleton = NodePath("../..")
 exit = 1
 connectedRoom = 2
@@ -136,16 +192,28 @@ transform = Transform3D(0.198257, 0.0185412, 0, -0.00700644, 0.52465, 0, 0, 0, 1
 transform = Transform3D(0.198381, 0, 0, 0, 0.524977, 0, 0, 0, 1.27199, 3.32468, -0.611005, -5.25249)
 
 [node name="Te4t_platform8" parent="." instance=ExtResource("6_hh0lo")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, 0.610909, -10.5939)
+transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, -1.56174, -0.222384, -9.70924)
 
 [node name="Te4t_platform9" parent="." instance=ExtResource("6_hh0lo")]
-transform = Transform3D(0.524977, 0, 0, 0, 0.524977, 0, 0, 0, 0.524977, 0.0243741, -0.398217, -13.4703)
+transform = Transform3D(1.1637, 0, 0, 0, 0.947674, 0, 0, 0, 1.34566, -0.00856207, -0.0418188, -16.4677)
+
+[node name="Te4t_platform14" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(1.1637, 0, 0, 0, -4.14241e-08, -1.34566, 0, 0.947674, -5.88207e-08, -0.00856207, 0.0544804, -17.9786)
+
+[node name="Te4t_platform10" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(1.1637, 0, 0, 0, -4.14241e-08, 0.524977, 0, -0.947674, -2.29475e-08, -0.00856207, -1.26344, -15.0192)
 
 [node name="Te4t_platform4" parent="." instance=ExtResource("6_hh0lo")]
 transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -5.78791)
 
 [node name="Te4t_platform5" parent="." instance=ExtResource("6_hh0lo")]
 transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, -3.21068, 0.541584, -5.78791)
+
+[node name="Te4t_platform12" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, 1.88546, 0.541584, -16.9125)
+
+[node name="Te4t_platform13" parent="." instance=ExtResource("6_hh0lo")]
+transform = Transform3D(-1.75853e-07, -1, 0, -1.75853e-07, 1.91069e-15, -0.870209, 4.02305, -4.37114e-08, -3.8038e-08, -3.21068, 0.541584, -16.9125)
 
 [node name="Te4t_platform2" parent="." instance=ExtResource("6_hh0lo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.887152, 0, 0, -7.64941)
@@ -157,10 +225,19 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -1.
 transform = Transform3D(2.29324, 0, 0, 0, 1, 0, 0, 0, 1.32712, -1.44998, -0.352683, -4.80606)
 axis_lock_angular_y = true
 
+[node name="Moving Platform2" parent="." instance=ExtResource("7_88nv5")]
+transform = Transform3D(1.47837, 0, 0, 0, 1, 0, 0, 0, 1, 1.06511, -0.473551, -9.93393)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "room1-platform1"
 libraries = {
 "": SubResource("AnimationLibrary_jjd4k")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_rkqxh")
 }
 
 [editable path="rear wall collider"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwigs5amus3q8"]
+[gd_scene load_steps=7 format=3 uid="uid://cwigs5amus3q8"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_vxuq8"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_k3evf"]
 [ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="3_64o67"]
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="4_kbhbn"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="5_wopfu"]
-[ext_resource type="PackedScene" uid="uid://cnok18d8ngbbr" path="res://Objects/moive_platform_2.tscn" id="6_wbrih"]
 [ext_resource type="PackedScene" uid="uid://ceed8awj3lsqn" path="res://Objects/big_key.tscn" id="8_tf6er"]
 
 [node name="Room" type="Node3D" groups=["Room"]]
@@ -93,15 +92,13 @@ transform = Transform3D(-1.42926e-07, -1, 3.80289e-08, 0, -4.37114e-08, -0.87, 3
 [node name="Te4t_platform9" parent="." instance=ExtResource("5_wopfu")]
 transform = Transform3D(-1, 1.50996e-07, -5.74221e-15, 0, -4.37114e-08, -0.87, -1.50996e-07, -1, 3.80289e-08, -0.0570493, 0.541584, -15.3316)
 
-[node name="moive platform 2" parent="." instance=ExtResource("6_wbrih")]
-
-[node name="moive platform 4" parent="." instance=ExtResource("6_wbrih")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.64349)
-
-[node name="moive platform 3" parent="." instance=ExtResource("6_wbrih")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -5.10903)
-
 [node name="BigKey" parent="." instance=ExtResource("8_tf6er")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17275, -0.462566, -13.2231)
+
+[node name="Te4t_platform3" parent="." instance=ExtResource("5_wopfu")]
+transform = Transform3D(0.255998, 0, 0, 0, 1, 0, 0, 0, 1.0764, 0.918138, -0.127887, -2.64038)
+
+[node name="Te4t_platform6" parent="." instance=ExtResource("5_wopfu")]
+transform = Transform3D(0.255998, 0, 0, 0, 1, 0, 0, 0, 1.0764, -0.804917, -0.127887, -7.7425)
 
 [editable path="Te4t_platform10"]
