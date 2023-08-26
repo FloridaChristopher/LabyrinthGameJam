@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwigs5amus3q8"]
+[gd_scene load_steps=6 format=3 uid="uid://cwigs5amus3q8"]
 
 [ext_resource type="Script" path="res://Scripts/Room.gd" id="1_vxuq8"]
 [ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="2_k3evf"]
 [ext_resource type="ArrayMesh" uid="uid://6scm53rj64q1" path="res://Models/collum.obj" id="3_64o67"]
 [ext_resource type="PackedScene" uid="uid://cb061gs4qifx8" path="res://Objects/doorway.tscn" id="4_kbhbn"]
 [ext_resource type="PackedScene" uid="uid://832o6u5ts2pp" path="res://Objects/te_4t_platform.tscn" id="5_wopfu"]
-[ext_resource type="PackedScene" uid="uid://rag02nht8chh" path="res://Objects/bigger_key.tscn" id="6_yrctf"]
 
 [node name="Room" type="Node3D" groups=["Room"]]
 script = ExtResource("1_vxuq8")
@@ -214,9 +213,6 @@ transform = Transform3D(0.218171, 0, -0.0315539, 0, 1, 0, 0.0199166, 0, 0.345649
 
 [node name="Te4t_platform6" parent="." instance=ExtResource("5_wopfu")]
 transform = Transform3D(0.255998, 0, 0, 0, 1, 0, 0, 0, 1.0764, -0.804917, -0.127887, -7.7425)
-
-[node name="BigKey" parent="." instance=ExtResource("6_yrctf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15427, -0.462566, -30.8583)
 
 [node name="Doorway2" parent="." instance=ExtResource("4_kbhbn")]
 transform = Transform3D(-3.149e-08, 0, 0.720406, 0, 0.720406, 0, -0.720406, 0, -3.149e-08, -2.32956, -0.229111, -30.9868)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://rag02nht8chh"]
+[gd_scene load_steps=9 format=3 uid="uid://rag02nht8chh"]
 
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_s7i48"]
 [ext_resource type="ArrayMesh" uid="uid://yr5epxnc45b8" path="res://Models/Bigger key.obj" id="2_47nk2"]
+[ext_resource type="AudioStream" uid="uid://202l5y2tk1c2" path="res://Music/Pickup Key.mp3" id="3_ppnvg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mki5a"]
 albedo_color = Color(0.27451, 0.27451, 0.27451, 1)
@@ -74,9 +75,10 @@ _data = {
 "keyspin": SubResource("Animation_0fnr4")
 }
 
-[node name="BigKey" type="Area3D" groups=["Key"]]
+[node name="BigKey" type="Area3D" node_paths=PackedStringArray("audio") groups=["Key"]]
 script = ExtResource("1_s7i48")
 isBiggerKey = true
+audio = NodePath("AudioStreamPlayer")
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(-0.676489, 0, -0.736452, 0, 1, 0, 0.736452, 0, -0.676489, 0, 0.0502393, 0)
@@ -97,5 +99,8 @@ reset_on_save = false
 libraries = {
 "": SubResource("AnimationLibrary_a3qgh")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ppnvg")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

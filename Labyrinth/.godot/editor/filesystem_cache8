@@ -1,5 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1693007719
+::res://::1693065788
+export_presets.cfg::TextFile::-1::1693065640::0::1::::<><>::
 icon.svg::CompressedTexture2D::6075953148470637611::1692625528::1692625647::1::::<><>::
 UI_theme.tres::Theme::9124157347361161279::1692640847::0::1::::<><>::uid://doisj3xe6yfy0
 ::res://Animations/::1692640503
@@ -13,42 +14,44 @@ Bigger key.obj::Mesh::1721456146065668387::1692813558::1692813562::1::::<><>::
 collum.obj::Mesh::2213157435605181270::1692629005::1692629005::1::::<><>::
 doorway.obj::Mesh::8654680382509222665::1692629817::1692629821::1::::<><>::
 lock gate.obj::Mesh::941017655229540826::1692831049::1692831082::1::::<><>::
-::res://Music/::1693007719
+::res://Music/::1693064158
 Pickup Key.mp3::AudioStreamWAV::1948368838644397479::1693003820::1693004003::1::::<><>::
-The_Delve.mp3::AudioStreamMP3::3698897816302330288::1693007716::1693007719::1::::<><>::
-::res://Objects/::1693004092
+The_Delve.mp3::AudioStreamMP3::3698897816302330288::1693007716::1693064158::1::::<><>::
+::res://Objects/::1693065439
+animatablebars.tscn::PackedScene::7100894422640822699::1693065439::0::1::::<><>::uid://dhbaxou0v4b5o<>res://Scripts/playerdist.gd
 bars.tscn::PackedScene::2082406085061245766::1692984082::0::1::::<><>::uid://dhbaxou0v4b5o<>res://Scripts/playerdist.gd
-bigger_key.tscn::PackedScene::1193620727208420949::1692982270::0::1::::<><>::res://Scripts/key.gd<>uid://yr5epxnc45b8
+bigger_key.tscn::PackedScene::1193620727208420949::1693065439::0::1::::<><>::res://Scripts/key.gd<>uid://yr5epxnc45b8<>uid://202l5y2tk1c2
 big_chest.tscn::PackedScene::6812272368269808609::1692973640::0::1::::<><>::uid://be64qkmgl5dyg<>res://Scripts/big_chest.gd
-big_key.tscn::PackedScene::4940204857588354675::1693004092::0::1::::<><>::uid://c2pmd4ijsjnlq<>res://Scripts/key.gd<>uid://202l5y2tk1c2
-doorway.tscn::PackedScene::4896568656578926627::1693004076::0::1::::<><>::uid://dhbaxou0v4b5o<>uid://dvknk6txtcfxh<>res://Scripts/warpdoor.gd<>uid://nn3onljle7bi
+big_key.tscn::PackedScene::4940204857588354675::1693065439::0::1::::<><>::uid://c2pmd4ijsjnlq<>res://Scripts/key.gd<>uid://202l5y2tk1c2
+doorway.tscn::PackedScene::4896568656578926627::1693065439::0::1::::<><>::uid://dhbaxou0v4b5o<>uid://dvknk6txtcfxh<>res://Scripts/warpdoor.gd<>uid://nn3onljle7bi
 moive_platform_2.tscn::PackedScene::5714852963228598295::1693003694::0::1::::<><>::uid://dhbaxou0v4b5o
 movable_platform.tscn::PackedScene::4266592586985181971::1692975583::0::1::::<><>::uid://dhbaxou0v4b5o
 rear wall.tscn::PackedScene::1942978772105957998::1692977041::0::1::::<><>::
 te_4t_platform.tscn::PackedScene::2375700437597240569::1692831743::0::1::::<><>::uid://dhbaxou0v4b5o<>res://Scripts/playerdist.gd
-::res://Rooms/::1693007685
-key1.tscn::PackedScene::9190108169137486854::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
-key2.tscn::PackedScene::4960454393239058377::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
-room0.tscn::PackedScene::3628565146559667103::1693007685::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://c4b6eo85fa5xl
-room1.tscn::PackedScene::4483188568276488286::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://b111fk8cj70p8<>uid://ccncpm1ri0kv0
-room2.tscn::PackedScene::4218140845386204615::1693004076::0::1::::<><>::uid://6scm53rj64q1<>res://Scripts/Room.gd<>uid://832o6u5ts2pp<>uid://dhbaxou0v4b5o<>uid://cb061gs4qifx8<>uid://b111fk8cj70p8<>uid://4wy6oeata46e<>uid://rag02nht8chh
-room3.tscn::PackedScene::80970427295419517::1693003693::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp
-room6.tscn::PackedScene::3352790400364852725::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
-room7.tscn::PackedScene::6333908971975476225::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
+::res://Rooms/::1693065439
+key1.tscn::PackedScene::9190108169137486854::1693007721::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
+key2.tscn::PackedScene::4960454393239058377::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
+key3.tscn::PackedScene::4797700763210096704::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
+room0.tscn::PackedScene::3628565146559667103::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://c4b6eo85fa5xl
+room1.tscn::PackedScene::4483188568276488286::1693007721::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://ds6qyo41p0yqr<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://b111fk8cj70p8<>uid://ccncpm1ri0kv0
+room2.tscn::PackedScene::4218140845386204615::1693007721::0::1::::<><>::uid://6scm53rj64q1<>res://Scripts/Room.gd<>uid://832o6u5ts2pp<>uid://dhbaxou0v4b5o<>uid://cb061gs4qifx8<>uid://b111fk8cj70p8<>uid://4wy6oeata46e<>uid://rag02nht8chh
+room3.tscn::PackedScene::80970427295419517::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp
+room6.tscn::PackedScene::3352790400364852725::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://c8fyxt5xhww0b<>uid://b111fk8cj70p8<>uid://2xgtuo53em6a
+room7.tscn::PackedScene::6333908971975476225::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp
 room9.tscn::PackedScene::4281912683864201043::1692984082::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
 roomA.tscn::PackedScene::8123947989833708846::1693003694::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://4wy6oeata46e<>uid://b111fk8cj70p8
-roomFinal.tscn::PackedScene::8937444618527570829::1693004076::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
-rooms array.tres::Resource/rooms_array::1280129416452076076::1693007685::0::1::::<><>::uid://brxx65eh0t5mh<>res://Scripts/roomsarray.gd<>uid://b44xpwublo52q<>uid://b1dkfs7b88pj8<>uid://bfhtog2xh4s4<>uid://dn0kibmf58qsc<>uid://d3600ed6kysne<>uid://bn1d76cbwfwk8<>uid://cwigs5amus3q8<>uid://ccw47u0prxwpl
-::res://Scenes/::1693004076
+roomFinal.tscn::PackedScene::8937444618527570829::1693065439::0::1::::<><>::res://Scripts/Room.gd<>uid://dhbaxou0v4b5o<>uid://6scm53rj64q1<>uid://cb061gs4qifx8<>uid://832o6u5ts2pp<>uid://rag02nht8chh
+rooms array.tres::Resource/rooms_array::1280129416452076076::1693064634::0::1::::<><>::uid://brxx65eh0t5mh<>res://Scripts/roomsarray.gd<>uid://b44xpwublo52q<>uid://b1dkfs7b88pj8<>uid://bfhtog2xh4s4<>uid://dn0kibmf58qsc<>uid://d3600ed6kysne<>uid://bn1d76cbwfwk8<>uid://cwigs5amus3q8<>uid://ccw47u0prxwpl<>uid://cambov18j2o5e
+::res://Scenes/::1693065648
 player.tscn::PackedScene::6177875006135969443::1692831743::0::1::::<><>::res://Scripts/playerphys2.gd<>res://Scripts/animator.gd<>res://Scripts/playerresetter.gd
-the_maze.tscn::PackedScene::3806666366894788050::1693004076::0::1::::<><>::res://Scripts/maze_control.gd<>uid://cuaux0000u4ex<>uid://sidsrnpedt4o<>res://Scripts/camerascroll.gd<>res://Scripts/collectablecontrol.gd<>uid://cdb6cv8ygoi3v<>res://Scripts/Debug2.gd<>uid://pogkcmlmsh4x<>uid://doisj3xe6yfy0
-::res://Scripts/::1693004066
+the_maze.tscn::PackedScene::3806666366894788050::1693065648::0::1::::<><>::res://Scripts/maze_control.gd<>uid://cuaux0000u4ex<>uid://sidsrnpedt4o<>res://Scripts/camerascroll.gd<>res://Scripts/collectablecontrol.gd<>uid://cdb6cv8ygoi3v<>res://Scripts/Debug2.gd<>uid://bsx1koplxumy7<>uid://doisj3xe6yfy0
+::res://Scripts/::1693065009
 animator.gd::GDScript::-1::1692831093::0::1::::<>Node3D<>::
 big_chest.gd::GDScript::-1::1692885451::0::1::::<>Node3D<>::
 camerascroll.gd::GDScript::-1::1692625528::0::1::::<>Node3D<>::
 collectablecontrol.gd::GDScript::-1::1693003391::0::1::::<>RichTextLabel<>::
 Debug2.gd::GDScript::-1::1692831093::0::1::::<>RichTextLabel<>::
-key.gd::GDScript::-1::1693004066::0::1::::<>Area3D<>::
+key.gd::GDScript::-1::1693065009::0::1::::<>Area3D<>::
 maze_control.gd::GDScript::-1::1693003115::0::1::::<>Node3D<>::
 playerdist.gd::GDScript::-1::1692831093::0::1::::<>MeshInstance3D<>::
 playerphys2.gd::GDScript::-1::1692831093::0::1::::playerphys2<>CharacterBody3D<>::

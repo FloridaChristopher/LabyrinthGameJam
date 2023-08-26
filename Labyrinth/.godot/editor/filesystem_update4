@@ -1,12 +1,14 @@
-res://Rooms/room0.tscn
-res://Rooms/rooms array.tres
-res://Scenes/the_maze.tscn
 res://Rooms/room7.tscn
-res://Rooms/room1.tscn
-res://Rooms/room2.tscn
-res://Rooms/key1.tscn
-res://Rooms/roomFinal.tscn
+res://Rooms/rooms array.tres
 res://Rooms/room6.tscn
+res://Objects/animatablebars.tscn
+res://Scenes/the_maze.tscn
+res://Rooms/roomFinal.tscn
 res://Objects/doorway.tscn
-res://Rooms/key2.tscn
 res://Objects/big_key.tscn
+res://Rooms/room0.tscn
+res://Rooms/room3.tscn
+res://Rooms/key2.tscn
+res://Scripts/key.gd
+res://Objects/bigger_key.tscn
+res://Rooms/key3.tscn

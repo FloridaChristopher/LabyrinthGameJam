@@ -92,7 +92,7 @@ script = ExtResource("1_kah3o")
 audio = NodePath("AudioStreamPlayer")
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(0.934172, 0, -0.35682, 0, 1, 0, 0.35682, 0, 0.934172, 0, 0.00792227, 0)
+transform = Transform3D(0.624884, 0, 0.780716, 0, 1, 0, -0.780716, 0, 0.624884, 0, 0.0194508, 0)
 
 [node name="BigKey" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(0.37248, 0, 0, 0, 0.341718, 0.148222, 0, -0.148222, 0.341718, 0, 0.0314566, 0.111401)

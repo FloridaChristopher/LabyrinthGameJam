@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8fyxt5xhww0b"]
+
+[ext_resource type="Material" uid="uid://dhbaxou0v4b5o" path="res://Shaders/Marble.tres" id="1_mpmgt"]
+[ext_resource type="Script" path="res://Scripts/playerdist.gd" id="2_qucdi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2hqrn"]
+size = Vector3(5, 0.3, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q1iyi"]
+material = ExtResource("1_mpmgt")
+size = Vector3(5, 0.3, 3)
+
+[node name="bars" type="AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.612566, 0)
+shape = SubResource("BoxShape3D_2hqrn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, 0.80521, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, 1.64887, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, 2.36274, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, -2.37641, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, -1.53275, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.0561103, 0, 0, 0, 1, 0, 0, 0, 1, -0.818886, -0.00737309, 0.00805759)
+mesh = SubResource("BoxMesh_q1iyi")
+script = ExtResource("2_qucdi")

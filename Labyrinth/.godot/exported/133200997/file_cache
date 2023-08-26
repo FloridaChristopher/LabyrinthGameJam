@@ -1,0 +1,28 @@
+res://Objects/animatablebars.tscn::872f1b229b3a1b5aa3cce67a4d2f3ffa::1693065439::res://.godot/exported/133200997/export-c23b42ab910e99540cad409e72b5d01e-animatablebars.scn
+res://Objects/bars.tscn::50365d66ac4f7fbd0780a8d34b7f6105::1692984082::res://.godot/exported/133200997/export-486b9c6295484c74af9a4d0c6ff7510a-bars.scn
+res://Objects/bigger_key.tscn::9a30b296af23627cd1b393d330531393::1693065439::res://.godot/exported/133200997/export-a68e8c5559ec9fcfcd2cdc3504e9d20a-bigger_key.scn
+res://Objects/big_chest.tscn::d11df89cf1f53b1a5fe1a91a07aa44a5::1692973640::res://.godot/exported/133200997/export-d1f2d0a9b00fb3f99d5bfa90b1f04589-big_chest.scn
+res://Objects/big_key.tscn::5553e229d6298ef5f4f84b40cc132cc9::1693065439::res://.godot/exported/133200997/export-a270d451ebc0548fffd56c47e75c5661-big_key.scn
+res://Objects/doorway.tscn::bde2e06219ce6d48b75e5feba50d4816::1693065439::res://.godot/exported/133200997/export-d45362ea032c8fc97c7e93522ce89156-doorway.scn
+res://Objects/moive_platform_2.tscn::a208c2f0ac888108eecc3606ef85ad35::1693003694::res://.godot/exported/133200997/export-04e84c3f4b8f6991100c89262f4e7cd1-moive_platform_2.scn
+res://Objects/movable_platform.tscn::8b821aa5f1846e4ac56abc1e6601f09f::1692975583::res://.godot/exported/133200997/export-33d15a66551ed3da1b655ceae18a7998-movable_platform.scn
+res://Objects/rear wall.tscn::42090c6c6aab7232a1a71dc69a460aa1::1692977041::res://.godot/exported/133200997/export-bb0eebae7214d855fc25a0beb0f0549e-rear wall.scn
+res://Objects/te_4t_platform.tscn::ad1f69ac0a9dd615696ce96f806d5b64::1692831743::res://.godot/exported/133200997/export-94cb38b81386798cee8a02109de027c2-te_4t_platform.scn
+res://Rooms/key1.tscn::0eb16eeb49ead3832fbdd17e08a59e1a::1693007721::res://.godot/exported/133200997/export-d661548e4bb77fcd80231a1dac4ffc13-key1.scn
+res://Rooms/key2.tscn::0e3eed0557abd67a9ee572a4396a4030::1693065439::res://.godot/exported/133200997/export-9b8019f0b8baf891e24407e4bad8bd68-key2.scn
+res://Rooms/key3.tscn::71071b5387723af8a73a17dcdcea1475::1693065439::res://.godot/exported/133200997/export-49085b80a0d1829a098882a8e031eaa3-key3.scn
+res://Rooms/room0.tscn::dc5427e386bf80d664a11a6842f9b0cc::1693065439::res://.godot/exported/133200997/export-813350433281290a92bcd9ea392333be-room0.scn
+res://Rooms/room1.tscn::f6a4262036cafa9ac86c4d9effbe4317::1693007721::res://.godot/exported/133200997/export-5b3ab48397fa28ea577b722dc84d0915-room1.scn
+res://Rooms/room2.tscn::481c813ce00eedf451201985f46c9750::1693007721::res://.godot/exported/133200997/export-00d1d68539273a287d19a4d607a05c70-room2.scn
+res://Rooms/room3.tscn::fbcb8e61136af6c650074b3c1b9a4d47::1693065439::res://.godot/exported/133200997/export-d096100fbba3d6a119f6fefb83b504d2-room3.scn
+res://Rooms/room6.tscn::d048d3340fb49fbf776a2bbafcc2665d::1693065439::res://.godot/exported/133200997/export-8c9df4f8dee363e7f4a94010c0f7d1b9-room6.scn
+res://Rooms/room7.tscn::7ed8a8be29dfec589f7e41a2ea3c704a::1693065439::res://.godot/exported/133200997/export-ec86c83f090440b449458cd6914581ed-room7.scn
+res://Rooms/room9.tscn::cd8696267c530db34e4e51be2b17b4c8::1692984082::res://.godot/exported/133200997/export-d579e1df232005b24c55e7f39a82338f-room9.scn
+res://Rooms/roomA.tscn::5387a8304feb8982db4960fbc228f7c1::1693003694::res://.godot/exported/133200997/export-d1a33a8f9542fdb8c758bbd14308303f-roomA.scn
+res://Rooms/roomFinal.tscn::839adf6cb57e2b85fa0e25db7aa40a9c::1693065439::res://.godot/exported/133200997/export-70bd628ff379055cae0b6a1796d5bdad-roomFinal.scn
+res://Rooms/rooms array.tres::cad86f9c50414f86aedf7afbed442e13::1693064634::res://.godot/exported/133200997/export-4ad8ac7dec219690e8b7a7b0b8486cd9-rooms array.res
+res://Scenes/player.tscn::cdf971f37c7aa2b886088ad7395aeff1::1692831743::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/the_maze.tscn::42ddd00ba46787d3d5493b9475c8c9d1::1693065445::res://.godot/exported/133200997/export-f1575a868c3b9037f935e692ffed8dde-the_maze.scn
+res://Shaders/Marble.tres::e1dc753da8ba4f62a1ca047918e6866d::1692628549::res://.godot/exported/133200997/export-617755a161040236eefc41659e122503-Marble.res
+res://UI/bigger_key_icon.tscn::40163130b4236246281e45f547a0773e::1692831049::res://.godot/exported/133200997/export-acadd30073dfaf0fac2b7249673c1926-bigger_key_icon.scn
+res://UI_theme.tres::fd16b7682a9c93414da0ad4f3e5944e0::1692640847::res://.godot/exported/133200997/export-642fa001a41b4f9853d4874cee71978f-UI_theme.res
